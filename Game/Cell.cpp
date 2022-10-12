@@ -1,7 +1,7 @@
 #include "Cell.h"
 
 Cell::Cell() : myType(SPACE) {}
-Cell::Cell(Player& player, cellType type) : myType(type), player(player) {}
+Cell::Cell(cellType type) : myType(type) {}
 //Cell::Cell(const Cell& obj)
 //{
 //    this->myType = obj.myType;
@@ -19,8 +19,8 @@ Cell:: ~Cell() {}
 
 void Cell::playerContact()
 {
-    if (myType == CHEST)
-        cellEvent.trigger(player, myType);
+    /*if (myType == CHEST)
+        cellEvent.trigger();*/
 }
 
 cellType Cell::getType()
@@ -28,7 +28,7 @@ cellType Cell::getType()
     return myType;
 }
 
-void Cell::changeType(cellType)
+void Cell::changeType()
 {
     myType = SPACE;
 }

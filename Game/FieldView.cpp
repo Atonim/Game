@@ -24,6 +24,6 @@ void FieldView::DrawField(Field& field) {
 	for (int i = 0; i < width + 2; i++)
 		printf("%c", '#');
 	printf("%c", '\n');
-	printf("%s %d", "\nKeys Found:", field.getPlayer().currentKeys());
+	printf("%s %d", "\nKeys Found:", field.getPlayer()->getKeys());
 	printf("%c", '\n');
 }

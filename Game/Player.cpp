@@ -1,29 +1,26 @@
 #include "Player.h"
 
-Player::Player() :health(100), keysFound(0), speed(1)
+Player::Player() :health(100), keysFound(0), godsBlessing(3)
 {
-	//std::cout << "PLAYER CONSRRUCT " << this << "\n";
+	std::cout << "PLAYER CONSRRUCT " << this << "\n";
 }
 
 Player::~Player()
 {
-	//std::cout << "PLAYER DELETE " << this << "\n";
+	std::cout << "PLAYER DELETE " << this << "\n";
 }
 
-Player::Player(const Player& obj)
-{
-	this->health = obj.health;
-	this->keysFound = obj.keysFound;
-	this->speed = obj.speed;
-}
-
-Player& Player::operator=(const Player& obj)
-{
-	this->health = obj.health;
-	this->keysFound = obj.keysFound;
-	this->speed = obj.speed;
-	return *this;
-}
+//Player::Player(const Player& obj)
+//{
+//	std::cout << "PLAYER COPY" << this << "\n";
+//	
+//}
+//
+//Player& Player::operator=(const Player& obj)
+//{
+//	std::cout << "PLAYER COPY OP" << this << "\n";
+//	return *this;
+//}
 
 void Player::keysPlus()
 {
@@ -40,28 +37,21 @@ void Player::getDamage()
 	health -= 25;
 }
 
-void Player::speedUp()
+void Player::blessing()
 {
-	speed++;
+	godsBlessing--;
 }
 
-void Player::speedDown()
-{
-	if (speed > 1)
-	speed--;
-}
-
-int Player::currentKeys()
+int Player::getKeys()
 {
 	return keysFound;
 }
 
-int Player::currentHealth()
+int Player::getHealth()
 {
 	return health;
 }
 
-int Player::currentSpeed()
-{
-	return speed;
+int Player::getGodsBlessing() {
+	return godsBlessing;
 }

@@ -13,6 +13,6 @@ void Game::run()
 	while (gameover) {
 		fieldView.DrawField(field);
 		input.listen(gameover);
-		logic.start(input.getDir(), field);
+		logic.start(input.getDir(), field, gameover);
 	}
 }

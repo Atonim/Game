@@ -1,39 +1,27 @@
 #include "Field.h"
-Field::Field(Player& player, int height, int width) :fieldHeight(height), fieldWidth(width), playerX(0), playerY(0), player(player) {
-    //std::cout << "CONSTRUCT ARG " << this << "\n";
-    for (int i = 0; i < fieldHeight; i++) {
-        mat.emplace_back(std::vector<Cell*>());
-        for (int j = 0; j < fieldWidth; j++) {
-            if (!(rand() % 5)) {
-                mat.back().emplace_back(new Cell(player, WALL));
-            }
-            else if (!(rand() % 10))
-            {
-                mat.back().emplace_back(new Cell(player, CHEST));
-            }
-            else {
-                mat.back().emplace_back(new Cell(player, SPACE));
-            }
-        }
-    }
-};
 Field::Field() : fieldHeight(10), fieldWidth(10), playerX(0), playerY(0), player(player) {
     //std::cout << "CONSTRUCT " << this << "\n";
     for (int i = 0; i < fieldHeight; i++) {
         mat.emplace_back(std::vector<Cell*>());
         for (int j = 0; j < fieldWidth; j++) {
             if (!(rand() % 5)) {
-                mat.back().emplace_back(new Cell(player, WALL));
+                mat.back().emplace_back(new Cell(WALL));
             }
             else if (!(rand() % 10))
             {
-                mat.back().emplace_back(new Cell(player, CHEST));
+                mat.back().emplace_back(new Cell(CHEST));
             }
             else {
-                mat.back().emplace_back(new Cell(player, SPACE));
+                mat.back().emplace_back(new Cell(SPACE));
             }
         }
     }
+};
+Field::Field(Player& player, int height, int width) : Field::Field() {
+    //std::cout << "CONSTRUCT ARG " << this << "\n";
+    this->fieldHeight = height;
+    this->fieldWidth = width;
+    this->player = player;
 };
 Field::~Field() {
     //std::cout << "DELETE " << this << "\n";
@@ -55,14 +43,14 @@ Field::Field(const Field& obj)
         this->mat.emplace_back(std::vector<Cell*>());
         for (int j = 0; j < fieldWidth; j++) {
             if (!(rand() % 5)) {
-                this->mat.back().emplace_back(new Cell(player, WALL));
+                this->mat.back().emplace_back(new Cell(WALL));
             }
             else if (!(rand() % 10))
             {
-                this->mat.back().emplace_back(new Cell(player, CHEST));
+                this->mat.back().emplace_back(new Cell(CHEST));
             }
             else {
-                this->mat.back().emplace_back(new Cell(player, SPACE));
+                this->mat.back().emplace_back(new Cell(SPACE));
             }
         }
     }
@@ -85,14 +73,14 @@ Field& Field::operator=(const Field& obj)
         this->mat.emplace_back(std::vector<Cell*>());
         for (int j = 0; j < fieldWidth; j++) {
             if (!(rand() % 5)) {
-                this->mat.back().emplace_back(new Cell(player, WALL));
+                this->mat.back().emplace_back(new Cell(WALL));
             }
             else if (!(rand() % 10))
             {
-                this->mat.back().emplace_back(new Cell(player, CHEST));
+                this->mat.back().emplace_back(new Cell(CHEST));
             }
             else {
-                this->mat.back().emplace_back(new Cell(player, SPACE));
+                this->mat.back().emplace_back(new Cell(SPACE));
             }
         }
     }
@@ -158,7 +146,7 @@ void Field::movePlayerY(int distance)
     playerY = distance;
 }
 
-Player& Field::getPlayer()
+Player* Field::getPlayer()
 {
-    return player;
+    return &player;
 }

@@ -1,6 +1,6 @@
 #include "Logic.h"
 
-void Logic::start(int dir, Field& field)
+void Logic::start(int dir, Field& field, int& gameover)
 {
 	int newX, newY;	//переменные для новых значений координат игрока
 	switch (dir) {  //считываем направление движения и двигаем игрока в нужную сторону
@@ -36,6 +36,17 @@ void Logic::start(int dir, Field& field)
 		break;
 	}
 
-	field.matrix().at(field.currentPlayerY()).at(field.currentPlayerX())->playerContact(); //клетка реагирует на игрока
+	//field.matrix().at(field.currentPlayerY()).at(field.currentPlayerX())->playerContact(); //клетка реагирует на игрока
+	SpaceEvent* event = new SpaceEvent(field.matrix().at(field.currentPlayerY()).at(field.currentPlayerX()));
+	event->trigger();
+	delete event;
+	
+	if (field.matrix().at(field.currentPlayerY()).at(field.currentPlayerX())->getType() == CHEST) {
+		KeyEvent* event = new KeyEvent(field.getPlayer());
+		event->trigger();
+		delete event;
+		std::cout << "KEEEEEEEEEEEEEEEEEEEY";
+	}
+
 	
 }

@@ -1,7 +1,11 @@
 #pragma once
 #include "Event.h"
-class CellEvent :public Event
+#include "Cell.h"
+class CellEvent : public Event
 {
 public:
-	void trigger(Player&, cellType&) override;
+	void trigger() override = 0;
+	CellEvent(Cell*);
+protected:
+	Cell* _cell = nullptr;
 };

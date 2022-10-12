@@ -27,6 +27,6 @@ public:
 	int currentPlayerY();
 	void movePlayerX(int);
 	void movePlayerY(int);
-	Player& getPlayer();
+	Player* getPlayer();
 };
 

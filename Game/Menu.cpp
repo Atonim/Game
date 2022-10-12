@@ -14,6 +14,6 @@ void Menu::start(Field& field, Player& player) {
 		field = Field(player, height, width);
 		break;
 	}
-	std::cout << "\n'W' - Up\n'A' - Left\n'S' - Down\n'D' - Right\n'X' - Exit\n\nPress any button to start\n";
+	std::cout << "\n'W' - Up\n'A' - Left\n'S' - Down\n'D' - Right\n'G' - Pray to the Gods\n'X' - Exit\n\nPress any button to start\n";
 	std::cin >> set;
 }

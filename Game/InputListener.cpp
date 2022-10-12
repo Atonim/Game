@@ -20,6 +20,9 @@ void InputListener::listen(int& gameover)
 		case 'x':
 			gameover = 0;
 			break;
+		case 'g':
+			gameover = 0;
+			break;
 		}
 	}
 }

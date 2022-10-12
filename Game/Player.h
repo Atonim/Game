@@ -4,19 +4,18 @@ class Player
 {
 	int keysFound;
 	int health;
-	int speed;
+	int godsBlessing;
 public:
 	Player();
 	~Player();
-	Player(const Player&);
-	Player& operator=(const Player&);
+	/*Player(const Player&);
+	Player& operator=(const Player&);*/
 	void keysPlus();
 	void treatment();
 	void getDamage();
-	void speedUp();
-	void speedDown();
-	int currentKeys();
-	int currentHealth();
-	int currentSpeed();
+	void blessing();
+	int getKeys();
+	int getHealth();
+	int getGodsBlessing();
 };
 
