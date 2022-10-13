@@ -127,49 +127,73 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CEFactory.cpp" />
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="CellView.cpp" />
+    <ClCompile Include="CureEvent.cpp" />
+    <ClCompile Include="CureFactory.cpp" />
     <ClCompile Include="DamageEvent.cpp" />
+    <ClCompile Include="DamageFactory.cpp" />
     <ClCompile Include="EventFactory.cpp" />
     <ClCompile Include="FieldView.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameEvent.cpp" />
+    <ClCompile Include="GEFactory.cpp" />
     <ClCompile Include="InputListener.cpp" />
     <ClCompile Include="KeyEvent.cpp" />
+    <ClCompile Include="KeyFactory.cpp" />
     <ClCompile Include="Logic.cpp" />
     <ClCompile Include="LoseEvent.cpp" />
+    <ClCompile Include="LoseFactory.cpp" />
+    <ClCompile Include="LoseWindow.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Field.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="PEFactory.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="CellEvent.cpp" />
     <ClCompile Include="PlayerEvent.cpp" />
     <ClCompile Include="SpaceEvent.cpp" />
+    <ClCompile Include="SpaceFactory.cpp" />
     <ClCompile Include="SquareEvent.cpp" />
     <ClCompile Include="WinEvent.cpp" />
+    <ClCompile Include="WinFactory.cpp" />
+    <ClCompile Include="WinWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CEFactory.h" />
     <ClInclude Include="Cell.h" />
     <ClInclude Include="CellView.h" />
+    <ClInclude Include="CureEvent.h" />
+    <ClInclude Include="CureFactory.h" />
     <ClInclude Include="DamageEvent.h" />
+    <ClInclude Include="DamageFactory.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventFactory.h" />
     <ClInclude Include="FieldView.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameEvent.h" />
+    <ClInclude Include="GEFactory.h" />
     <ClInclude Include="KeyEvent.h" />
+    <ClInclude Include="KeyFactory.h" />
     <ClInclude Include="LoseEvent.h" />
+    <ClInclude Include="LoseFactory.h" />
+    <ClInclude Include="LoseWindow.h" />
     <ClInclude Include="Mytypes.h" />
     <ClInclude Include="InputListener.h" />
     <ClInclude Include="Logic.h" />
     <ClInclude Include="Field.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="PEFactory.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="CellEvent.h" />
     <ClInclude Include="PlayerEvent.h" />
     <ClInclude Include="SpaceEvent.h" />
+    <ClInclude Include="SpaceFactory.h" />
     <ClInclude Include="SquareEvent.h" />
     <ClInclude Include="WinEvent.h" />
+    <ClInclude Include="WinFactory.h" />
+    <ClInclude Include="WinWindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

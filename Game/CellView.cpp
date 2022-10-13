@@ -12,6 +12,12 @@ void CellView::cellDraw(Cell& cell)
 	case CHEST:
 		printf("%c", 'o');
 		break;
+	case TRAP:
+		printf("%c", 'o');
+		break;
+	case SHRINE:
+		printf("%c", '*');
+		break;
 	default:
 		printf("%c", '?');
 		break;

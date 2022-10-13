@@ -1,9 +1,9 @@
 #pragma once
 #include "PlayerEvent.h"
-class DamageEvent : public PlayerEvent
+class CureEvent : public PlayerEvent
 {
 public:
 	void trigger() override;
-	DamageEvent(Player*);
+	CureEvent(Player*);
 };
 

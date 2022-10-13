@@ -9,10 +9,10 @@ void Game::run()
 	Menu menu;
 	FieldView fieldView;
 	int gameover = 1;
-	menu.start(field, player);
+	menu.start(field);
 	while (gameover) {
-		fieldView.DrawField(field);
+		fieldView.DrawField(field, player);
 		input.listen(gameover);
-		logic.start(input.getDir(), field, gameover);
+		logic.start(input.getDir(), field, player, gameover);
 	}
 }

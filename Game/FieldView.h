@@ -5,11 +5,11 @@
 #include "Player.h"
 #include "Cell.h"
 #include "CellView.h"
-
+#include <iostream>
 class FieldView
 {
 	CellView cellView;
 public:
-	void DrawField(Field&);
+	void DrawField(Field&, Player&);
 };
 

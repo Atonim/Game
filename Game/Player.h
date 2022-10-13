@@ -9,10 +9,12 @@ public:
 	Player();
 	~Player();
 	/*Player(const Player&);
-	Player& operator=(const Player&);*/
+	Player(Player&&);
+	Player& operator=(const Player&);
+	Player& operator=(Player&&);*/
 	void keysPlus();
 	void treatment();
-	void getDamage();
+	void damage();
 	void blessing();
 	int getKeys();
 	int getHealth();

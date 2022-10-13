@@ -5,28 +5,25 @@
 
 class Field
 {
-	int fieldHeight;
-	int fieldWidth;
+	int size;
 	std::vector<std::vector<Cell*>> mat;
-	Player player;
 	int playerX;
 	int playerY;
 	
 public:
 	Field(); //коструктор 
-	Field(Player&, int, int); //конструктор с переданными параметрами
+	Field(int); //конструктор с переданными параметрами
 	~Field(); //деструктор
 	Field(const Field&); //конструктор копирования
 	Field& operator =(const Field&);
 	Field(Field&&);
 	Field& operator=(Field&& obj);
-	int height();
-	int width();
-	std::vector<std::vector<Cell*>> matrix();
-	int currentPlayerX();
-	int currentPlayerY();
+	int getSize();;
+	std::vector<std::vector<Cell*>> getMatrix();
+	int getPlayerX();
+	int getPlayerY();
 	void movePlayerX(int);
 	void movePlayerY(int);
-	Player* getPlayer();
+	//Player* getPlayer();
 };
 

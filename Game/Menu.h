@@ -5,6 +5,6 @@ class Menu
 {
 	
 public:
-	void start(Field&, Player&);
+	void start(Field&);
 };
 

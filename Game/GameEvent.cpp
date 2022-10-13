@@ -1,5 +1,3 @@
 #include "GameEvent.h"
 
-void GameEvent::trigger()
-{
-}
+GameEvent::GameEvent(int* gameover) : _gameover(gameover) {};
