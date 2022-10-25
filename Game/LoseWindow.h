@@ -1,9 +1,10 @@
 #pragma once
 #include <iostream>
 #include <Windows.h>
-class LoseWindow
+#include "Window.h"
+class LoseWindow : public Window
 {
 public:
-	void run();
+	void run() override;
 };
 

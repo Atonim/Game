@@ -1,12 +1,13 @@
 #pragma once
+#include "AbstractEventFactory.h"
 #include "Event.h"
+#include "WinEvent.h"
+#include "LoseEvent.h"
 
-class GameEvent : public Event
+class GameEvent : public AbstractEventFactory
 {
 public:
-	void trigger() override = 0;
-	GameEvent(int*);
-protected:
-	int* _gameover = nullptr;
+	Event* createEvent() override;
+	Event* createSecEvent();
 };
 

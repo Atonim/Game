@@ -1,9 +1,10 @@
 #pragma once
 #include <iostream>
 #include <Windows.h>
-class WinWindow
+#include "Window.h"
+class WinWindow : public Window
 {
 public:
-	void run();
+	void run() override;
 };
 

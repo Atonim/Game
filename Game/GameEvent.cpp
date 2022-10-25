@@ -1,3 +1,8 @@
 #include "GameEvent.h"
 
-GameEvent::GameEvent(int* gameover) : _gameover(gameover) {};
+Event* GameEvent::createEvent() {
+	return new WinEvent;
+}
+Event* GameEvent::createSecEvent() {
+	return new LoseEvent;
+}

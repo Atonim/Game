@@ -1,12 +1,17 @@
 #pragma once
+#include "AbstractEventFactory.h"
 #include "Event.h"
 #include "Player.h"
-class PlayerEvent : public Event
+#include "KeyEvent.h"
+#include "DamageEvent.h"
+#include "HealEvent.h"
+class PlayerEvent : public AbstractEventFactory
 {
-public:
-	void trigger() override = 0;
-	PlayerEvent(Player*);
-protected:
 	Player* _player = nullptr;
+public:
+	Event* createEvent() override;
+	Event* createSecEvent();
+	Event* createThirdEvent();
+	PlayerEvent(Player*);
 };
 

@@ -16,7 +16,7 @@ void CellView::cellDraw(Cell& cell)
 		printf("%c", 'o');
 		break;
 	case SHRINE:
-		printf("%c", '*');
+		printf("%c", '+');
 		break;
 	default:
 		printf("%c", '?');

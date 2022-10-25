@@ -10,6 +10,6 @@ class FieldView
 {
 	CellView cellView;
 public:
-	void DrawField(Field&, Player&);
+	void DrawField(Field*, Player*);
 };
 

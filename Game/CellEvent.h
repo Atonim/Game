@@ -1,10 +1,11 @@
 #pragma once
+#include "AbstractEventFactory.h"
 #include "Event.h"
 #include "Cell.h"
-class CellEvent : public Event
+class CellEvent : public AbstractEventFactory
 {
 public:
-	void trigger() override = 0;
+	Event* createEvent() override;
 	CellEvent(Cell*);
 protected:
 	Cell* _cell = nullptr;

@@ -1,7 +1,7 @@
 #include "KeyEvent.h"
-
+KeyEvent::KeyEvent(Player* player) : player_(player) {}
 void KeyEvent::trigger()
 {
-	_player->keysPlus();
+	player_->keysPlus();
 }
-KeyEvent::KeyEvent(Player* player) : PlayerEvent(player) {}
+

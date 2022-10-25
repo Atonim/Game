@@ -2,7 +2,7 @@
 
 void DamageEvent::trigger()
 {
-	_player->damage();
+	player_->damage();
 }
 
-DamageEvent::DamageEvent(Player* player) : PlayerEvent(player) {}
+DamageEvent::DamageEvent(Player* player) : player_ (player) {}

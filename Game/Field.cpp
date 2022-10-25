@@ -8,15 +8,21 @@ Field::Field() : size(10), playerX(0), playerY(0) {
                 mat.back().emplace_back(new Cell(SHRINE));
             }
             else if (!(rand() % 5)) {
-                mat.back().emplace_back(new Cell(WALL));
+                Cell* wall = new Cell(WALL);
+                mat.back().emplace_back(wall);
+                walls.emplace_back(wall);
             }
             else if (!(rand() % 10))
             {
-                mat.back().emplace_back(new Cell(CHEST));
+                Cell* chest = new Cell(CHEST);
+                mat.back().emplace_back(chest);
+                keys.emplace_back(chest);
             }
             else if (!(rand() % 50))
             {
-                mat.back().emplace_back(new Cell(TRAP));
+                Cell* trap = new Cell(TRAP);
+                mat.back().emplace_back(trap);
+                traps.emplace_back(trap);
             }
             else {
                 mat.back().emplace_back(new Cell(SPACE));
@@ -33,15 +39,21 @@ Field::Field(int size) : size(size), playerX(0), playerY(0) {
                 mat.back().emplace_back(new Cell(SHRINE));
             }
             else if (!(rand() % 5)) {
-                mat.back().emplace_back(new Cell(WALL));
+                Cell* wall = new Cell(WALL);
+                mat.back().emplace_back(wall);
+                walls.emplace_back(wall);
             }
             else if (!(rand() % 10))
             {
-                mat.back().emplace_back(new Cell(CHEST));
+                Cell* chest = new Cell(CHEST);
+                mat.back().emplace_back(chest);
+                keys.emplace_back(chest);
             }
             else if (!(rand() % 50))
             {
-                mat.back().emplace_back(new Cell(TRAP));
+                Cell* trap = new Cell(TRAP);
+                mat.back().emplace_back(trap);
+                traps.emplace_back(trap);
             }
             else {
                 mat.back().emplace_back(new Cell(SPACE));
@@ -69,15 +81,21 @@ Field::Field(const Field& obj)
                 mat.back().emplace_back(new Cell(SHRINE));
             }
             else if (!(rand() % 5)) {
-                mat.back().emplace_back(new Cell(WALL));
+                Cell* wall = new Cell(WALL);
+                mat.back().emplace_back(wall);
+                walls.emplace_back(wall);
             }
             else if (!(rand() % 10))
             {
-                mat.back().emplace_back(new Cell(CHEST));
+                Cell* chest = new Cell(CHEST);
+                mat.back().emplace_back(chest);
+                keys.emplace_back(chest);
             }
             else if (!(rand() % 50))
             {
-                mat.back().emplace_back(new Cell(TRAP));
+                Cell* trap = new Cell(TRAP);
+                mat.back().emplace_back(trap);
+                traps.emplace_back(trap);
             }
             else {
                 mat.back().emplace_back(new Cell(SPACE));
@@ -103,15 +121,21 @@ Field& Field::operator=(const Field& obj)
                 mat.back().emplace_back(new Cell(SHRINE));
             }
             else if (!(rand() % 5)) {
-                mat.back().emplace_back(new Cell(WALL));
+                Cell* wall = new Cell(WALL);
+                mat.back().emplace_back(wall);
+                walls.emplace_back(wall);
             }
             else if (!(rand() % 10))
             {
-                mat.back().emplace_back(new Cell(CHEST));
+                Cell* chest = new Cell(CHEST);
+                mat.back().emplace_back(chest);
+                keys.emplace_back(chest);
             }
             else if (!(rand() % 50))
             {
-                mat.back().emplace_back(new Cell(TRAP));
+                Cell* trap = new Cell(TRAP);
+                mat.back().emplace_back(trap);
+                traps.emplace_back(trap);
             }
             else {
                 mat.back().emplace_back(new Cell(SPACE));
@@ -149,6 +173,21 @@ int Field::getSize() {
 std::vector<std::vector<Cell*>> Field::getMatrix()
 {
     return mat;
+}
+
+int Field::getKeys()
+{
+    return keys.size();
+}
+
+int Field::getTraps()
+{
+    return traps.size();
+}
+
+int Field::getWalls()
+{
+    return walls.size();
 }
 
 int Field::getPlayerX()

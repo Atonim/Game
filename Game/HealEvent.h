@@ -1,11 +1,11 @@
 #pragma once
 #include "Event.h"
 #include "Player.h"
-class DamageEvent : public Event
+class HealEvent : public Event
 {
-	Player* player_;
+	Player* player_ = nullptr;
 public:
 	void trigger() override;
-	DamageEvent(Player*);
+	HealEvent(Player*);
 };
 

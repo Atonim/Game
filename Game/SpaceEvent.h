@@ -1,11 +1,12 @@
 #pragma once
-#include "CellEvent.h"
-#include "Cell.h"
+#include "Event.h"
+#include "Field.h"
 #include "Mytypes.h"
-class SpaceEvent : public CellEvent
+class SpaceEvent : public Event
 {
+	Field* field_ = nullptr;
 public:
 	void trigger() override;
-	SpaceEvent(Cell*);
+	SpaceEvent(Field*);
 };
 

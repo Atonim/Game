@@ -1,9 +1,6 @@
 #pragma once
 #include "Event.h"
-class EventFactory
-{
+class AbstractEventFactory {
 public:
 	virtual Event* createEvent() = 0;
-	void trigger();
 };
-

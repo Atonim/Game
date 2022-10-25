@@ -1,35 +1,33 @@
 #include "InputListener.h"
 
-void InputListener::listen(int& gameover)
+void InputListener::listen()
 {
-	dir = STOP;
+	command = STOP;
 	if (_kbhit()) {
 		switch (_getch()) {
 		case 'w':
-			dir = UP;
+			command = UP;
 			break;
 		case 'a':
-			dir = LEFT;
+			command = LEFT;
 			break;
 		case 's':
-			dir = DOWN;
+			command = DOWN;
 			break;
 		case 'd':
-			dir = RIGHT;
+			command = RIGHT;
 			break;
 		case 'x':
-			gameover = 0;
+			command = EXIT;
 			break;
 		case 'g':
-			gameover = 0;
+			command = ACTIVITY;
 			break;
 		}
 	}
-}
-
-int InputListener::getDir()
-{
-	return dir;
+	CommandMediator* mediator = dynamic_cast<CommandMediator*>(mediator_);
+	mediator->setCommand(command);
+	mediator->notify();
 }
 
 

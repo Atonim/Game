@@ -2,11 +2,13 @@
 #include <cstdio>
 #include <conio.h>
 #include "Mytypes.h"
-class InputListener
+#include "BaseComponent.h"
+#include "CommandMediator.h"
+class InputListener : public BaseComponent
 {
-	eDirection dir;
+	eDirection command;
 public:
-	void listen(int&);
-	int getDir();
+	void listen();
+	
 };
 

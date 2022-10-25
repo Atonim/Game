@@ -1,25 +1,19 @@
 #pragma once
-#include "InputListener.h"
+#include <list>
 #include "Player.h"
 #include "Field.h"
-#include "Mytypes.h"
-//#include "SpaceEvent.h"
-//#include "KeyEvent.h"
-//#include "WinEvent.h"
-//#include "DamageEvent.h"
-//#include "LoseEvent.h"
-//#include "CureEvent.h"
-//#include "EventFactory.h"
-//#include "PEFactory.h"
-#include "KeyFactory.h"
-#include "DamageFactory.h"
-#include "CureFactory.h"
-#include "SpaceFactory.h"
-#include "LoseFactory.h"
-#include "WinFactory.h"
-class Logic
+#include "AbstractEventFactory.h"
+#include "PlayerEvent.h"
+#include "GameEvent.h"
+#include "FieldEvent.h"
+#include "ISubject.h"
+class Logic : public ISubject
 {
+	std::list<IObserver*> list_observer_;
 public:
-	void start(int, Field&, Player&, int&);
+	void start(Field&, Player&);
+	void notify() override;
+	void attach(IObserver*) override;
+	void detach(IObserver*) override;
 };
 

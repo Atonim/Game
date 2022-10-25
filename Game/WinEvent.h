@@ -1,10 +1,9 @@
 #pragma once
-#include "GameEvent.h"
+#include "Event.h"
 #include "WinWindow.h"
-class WinEvent : public GameEvent
+class WinEvent : public Event
 {
 public:
-	WinEvent(int*);
 	void trigger() override;
 };
 
