@@ -1,14 +1,23 @@
 #pragma once
 #include "IObserver.h"
 #include "Controller.h"
-class LevelRunner : public IObserver
+#include "ILogSubject.h"
+#include "GameMessage.h"
+class LevelRunner : public IObserver, public ILogSubject
 {
-	bool process = true;
-	std::list<ISubject*> list_subject_;
+	enum type { START, OVER, PAUSED, SAVED };
+	bool process;
+	std::list<ISubject*> list_subject_;			//подписки
+	std::list<ILogObserver*> list_observer_;	//подписчики
 public:
+	LevelRunner();
 	void removeMeFromAllLists();
 	bool getProcess();
+	void start();
 	void update() override;
 	void addSubject(ISubject*);
+	void attach(ILogObserver*) override;
+	void detach(ILogObserver*) override;
+	void notify(IMessage*, int) override;
 };
 

@@ -6,7 +6,7 @@
 #include "CommandMediator.h"
 class InputListener : public BaseComponent
 {
-	eDirection command;
+	eDirection command = STOP;
 public:
 	void listen();
 	

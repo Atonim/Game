@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Logger">
+      <UniqueIdentifier>{34cafdf6-4717-4bcd-b5e5-c89d8364f6bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -88,6 +91,42 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="FieldEvent.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrLevel.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLevel.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoLevel.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="LogLevel.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrMessage.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMessage.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoMessage.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleLog.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="FileLog.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="LogObserver.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="LogMenu.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -186,6 +225,51 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Window.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrLevel.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoLevel.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLevel.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="LogLevel.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="IMessage.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrMessage.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMessage.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoMessage.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleLog.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="FileLog.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="LogObserver.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="ILogObserver.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="ILogSubject.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="LogMenu.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

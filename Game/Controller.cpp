@@ -35,14 +35,14 @@ void Controller::run(eDirection command)
 		if (field_->getMatrix().at(field_->getPlayerY()).at(newX)->getType())
 			field_->movePlayerX(newX);
 		break;
+	
+	case EXIT:
+		notify();
+		break;
+	case ACTIVITY:
+		notify();
+		break;
 	}
-	//case EXIT:
-	//	//notify();
-	//	break;
-	//case ACTIVITY:
-	//	//notify();
-	//	break;
-	//}
 }
 
 

@@ -7,6 +7,9 @@
 #include "CommandMediator.h"
 #include "Controller.h"
 #include "LevelRunner.h"
+
+#include "LogObserver.h"
+#include "LogMenu.h"
 class Game
 {
 public:
