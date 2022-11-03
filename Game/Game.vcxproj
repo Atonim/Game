@@ -151,7 +151,6 @@
     <ClCompile Include="LevelRunner.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Logic.cpp" />
-    <ClCompile Include="LogLevel.cpp" />
     <ClCompile Include="LogMenu.cpp" />
     <ClCompile Include="LogObserver.cpp" />
     <ClCompile Include="LoseEvent.cpp" />

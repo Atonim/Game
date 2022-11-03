@@ -8,7 +8,7 @@
 #include "FieldEvent.h"
 #include "ISubject.h"
 #include "ILogSubject.h"
-#include "InfoMessage.h"
+#include "InfoLevel.h"
 class Logic : public ISubject, public ILogSubject
 {
 	std::list<IObserver*> list_observer_;		// для остального
@@ -22,6 +22,6 @@ public:
 	void attach(ILogObserver*) override;
 	void detach(IObserver*) override;
 	void detach(ILogObserver*) override;
-	void notify(IMessage*, int) override;
+	void notify(LogLevel*, int) override;
 };
 

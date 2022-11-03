@@ -105,9 +105,6 @@
     <ClCompile Include="InfoLevel.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
-    <ClCompile Include="LogLevel.cpp">
-      <Filter>Logger</Filter>
-    </ClCompile>
     <ClCompile Include="ErrMessage.cpp">
       <Filter>Logger</Filter>
     </ClCompile>

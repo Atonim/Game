@@ -4,18 +4,19 @@
 #include "Logger.h"
 #include "IMessage.h"
 #include "ILogSubject.h"
+#include "Mytypes.h"
 class LogObserver : public ILogObserver
 {
 	std::list<Logger*> list_loggers_;			//все используемые логгеры (принтеры)
-	std::list<LogLevel*> list_loglvl_;			//все используемые логлевелы
 	std::list<ILogSubject*> list_subject_;
+	logLevel priority = INFOLVL;							//приоретет логлевелов
 public:
-	void check(IMessage*, int);
-	void update(const char* message) override;
+	//void check();
+	void update(LogLevel*, int) override;
+	void setPriority(logLevel);
 	void addSubject(ILogSubject*);
 	void addLogger(Logger*);
-	void addLogLvl(LogLevel*);
-	void removeLogger();
+	//void removeLogger();
 	void removeMeFromAllLists();
 	~LogObserver();
 };

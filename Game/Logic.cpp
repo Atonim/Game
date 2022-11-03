@@ -8,14 +8,14 @@ void Logic::start(Field& field, Player& player)
 	//AbstractEventFactory* factory;
 	//фабрика глобального события
 	if (player.getHealth() == 0) {
-		this->notify(new InfoMessage, DEATH);
+		this->notify(new InfoLevel, DEATH);
 		this->notify();
 		GameEvent* factory = new GameEvent();
 		factory->createSecEvent()->trigger();
 		delete factory;
 	}
 	else if (player.getKeys() == field.getKeys()) {
-		this->notify(new InfoMessage, VICTORY);
+		this->notify(new InfoLevel, VICTORY);
 		this->notify();
 		GameEvent* factory = new GameEvent;
 		factory->createEvent()->trigger();
@@ -24,24 +24,24 @@ void Logic::start(Field& field, Player& player)
 	else {
 		//фабрика события над игроком
 		if (playerCell->getType() == SHRINE) {
-			this->notify(new InfoMessage, HEAL);
+			this->notify(new InfoLevel, HEAL);
 			PlayerEvent* factory = new PlayerEvent(&player);
 			factory->createThirdEvent()->trigger();
 			delete factory;
 		}
 		if (playerCell->getType() == CHEST) {
-			this->notify(new InfoMessage, KEY);
+			this->notify(new InfoLevel, KEY);
 			PlayerEvent* factory = new PlayerEvent(&player);
 			factory->createEvent()->trigger();
 			delete factory;
 			//изменение клетки
-			this->notify(new InfoMessage, CELL);
+			this->notify(new InfoLevel, CELL);
 			FieldEvent* changecell = new FieldEvent(&field);
 			changecell->createEvent()->trigger();
 			delete changecell;
 		}
 		if (playerCell->getType() == TRAP) {
-			this->notify(new InfoMessage, DAMAGE);
+			this->notify(new InfoLevel, DAMAGE);
 			PlayerEvent* factory = new PlayerEvent(&player);
 			factory->createSecEvent()->trigger();
 			delete factory;
@@ -79,13 +79,12 @@ void Logic::detach(ILogObserver* observer)
 	list_logobserver_.remove(observer);
 }
 
-void Logic::notify(IMessage* messagelvl, int key)
+void Logic::notify(LogLevel* messagelvl, int key)
 {
 	std::list<ILogObserver*>::iterator iterator = list_logobserver_.begin();
 	while (iterator != list_logobserver_.end()) {
-		//тут вызываем методы обсервера 
-		const char* message = messagelvl->get_message(key);
-		(*iterator)->update(message);
+		(*iterator)->update(messagelvl, key);
 		++iterator;
 	}
+	delete messagelvl;
 }

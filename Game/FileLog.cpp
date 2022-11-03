@@ -1,5 +1,7 @@
 #include "FileLog.h"
 
+
+
 FileLog::FileLog() {
 	set_file_output();
 }
@@ -9,16 +11,18 @@ FileLog::FileLog(const char* file_path) {
 }
 
 void FileLog::free_file() {
-	fclose(file);
-	file = 0;
+	file.close();
 }
 
 void FileLog::print(const char* message) {
-	if (file) {
-		fprintf(file, message);
-		fprintf(file, "\n");
+	if (file.is_open()) {
+		file << message << std::endl;
 	}
-	
+}
+std::ostream& operator<<(std::fstream& stream, const char* str) {
+
+	stream << std::string(str) << std::endl;
+	return stream;
 }
 
 FileLog::~FileLog() {
@@ -26,12 +30,12 @@ FileLog::~FileLog() {
 }
 
 void FileLog::enable_file_output() {
-	if (file != 0) {
-		fclose(file);
+	if (file.is_open()) {
+		file.close();
 	}
 	
-	file = fopen(file_path, "a");
-	if (file == 0) {
+	file.open(file_path, std::ios_base::out);
+	if (file.fail()) {
 		printf("[LOGGER] Failed to open file at %s", file_path);
 	}
 }

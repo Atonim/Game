@@ -41,32 +41,29 @@ void LogMenu::run()
 
 void LogMenu::setlevel()
 {
-	observer_->addLogLvl(new ErrLevel);
-	observer_->addLogLvl(new GameLevel);
-	observer_->addLogLvl(new InfoLevel);
-	/*system("cls");
-	printf("\t- Choose an option:\n\n\
-	\t0 - No logging\n\
-	\t1 - Console logging\n\
-	\t2 - File logging\n\
-	\t3 - Console and File logging\n\n\
-	\tPress any other button to skip\n\n");
+	system("cls");
+	printf("Choose logging level:\n\n\
+	0 - Errors Level\n\
+	1 - Game Global Info Level\n\
+	2 - Event Info Level (default)\n\n\
+	Press any other button to skip\n\n");
 
 	char set;
 	std::cin >> set;
 	switch (set)
 	{
 	case '0':
-
+		observer_->setPriority(ERRLVL);
+		break;
 	case '1':
-		addConsoleLogger();
-		setlevel();
+		observer_->setPriority(GAMELVL);
 		break;
 	case '2':
-	case '3':
+		observer_->setPriority(INFOLVL);
+		break;
 	default:
 		break;
-	}*/
+	}
 }
 
 void LogMenu::addConsoleLogger()

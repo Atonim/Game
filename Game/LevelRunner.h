@@ -2,7 +2,7 @@
 #include "IObserver.h"
 #include "Controller.h"
 #include "ILogSubject.h"
-#include "GameMessage.h"
+#include "GameLevel.h"
 class LevelRunner : public IObserver, public ILogSubject
 {
 	enum type { START, OVER, PAUSED, SAVED };
@@ -18,6 +18,6 @@ public:
 	void addSubject(ISubject*);
 	void attach(ILogObserver*) override;
 	void detach(ILogObserver*) override;
-	void notify(IMessage*, int) override;
+	void notify(LogLevel*, int) override;
 };
 

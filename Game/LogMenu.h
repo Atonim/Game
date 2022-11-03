@@ -16,7 +16,7 @@ public:
 	void setlevel();
 	void addConsoleLogger();
 	void addFileLogger();
-	void removeConsoleLogger();
-	void removeFileLogger();
+	/*void removeConsoleLogger();
+	void removeFileLogger();*/
 };
 

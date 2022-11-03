@@ -12,7 +12,7 @@ void LevelRunner::removeMeFromAllLists()
 
 void LevelRunner::start() {
 	process = true;
-	this->notify(new GameMessage, START);
+	this->notify(new GameLevel, START);
 }
 bool LevelRunner::getProcess()
 {
@@ -22,7 +22,7 @@ bool LevelRunner::getProcess()
 void LevelRunner::update()
 {
 	process = false;
-	this->notify(new GameMessage, OVER);
+	this->notify(new GameLevel, OVER);
 }
 
 void LevelRunner::addSubject(ISubject* subject) {
@@ -40,13 +40,13 @@ void LevelRunner::detach(ILogObserver* observer)
 	list_observer_.remove(observer);
 }
 
-void LevelRunner::notify(IMessage* messagelvl, int key)
+void LevelRunner::notify(LogLevel* messagelvl, int key)
 {
 	std::list<ILogObserver*>::iterator iterator = list_observer_.begin();
 	while (iterator != list_observer_.end()) {
 		//тут вызываем методы обсервера 
-		const char* message = messagelvl->get_message(key);
-		(*iterator)->update(message);
+		(*iterator)->update(messagelvl, key);
 		++iterator;
 	}
+	delete messagelvl;
 }

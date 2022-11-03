@@ -18,7 +18,7 @@ void Menu::start(Field& field) {
 				std::cin.clear();					// очищаем недопустимый ввод из потока
 				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 				// попробовать снова
-				notify(new ErrMessage, FIELD);		//логируем ошибку
+				notify(new ErrLevel, FIELD);		//логируем ошибку
 				getchar();
 				continue;
 			}
@@ -26,14 +26,14 @@ void Menu::start(Field& field) {
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			if (std::cin.gcount() > 1)				// если мы удалили более одного дополнительного символа
 			{
-				notify(new ErrMessage, FIELD);
+				notify(new ErrLevel, FIELD);
 				getchar();
 				continue;							// будем считать этот ввод недопустимым
 			}
 
 			if (size < 10 || size > 15)				// убедиться, что значение какое нужно
 			{
-				notify(new ErrMessage, FIELD);
+				notify(new ErrLevel, FIELD);
 				getchar();
 				continue;
 			}
@@ -58,13 +58,13 @@ void Menu::detach(ILogObserver* observer)
 	list_observer_.remove(observer);
 }
 
-void Menu::notify(IMessage* messagelvl, int key)
+void Menu::notify(LogLevel* messagelvl, int key)
 {
 	std::list<ILogObserver*>::iterator iterator = list_observer_.begin();
 	while (iterator != list_observer_.end()) {
 		//тут вызываем методы обсервера 
-		const char* message = messagelvl->get_message(key);
-		(*iterator)->update(message);
+		(*iterator)->update(messagelvl, key);
 		++iterator;
 	}
+	delete messagelvl;
 }

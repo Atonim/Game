@@ -4,7 +4,7 @@
 #include "ILogSubject.h"
 #include "ILogObserver.h"
 #include <list>
-#include "ErrMessage.h"
+#include "ErrLevel.h"
 class Menu : public ILogSubject
 {
 	std::list<ILogObserver*> list_observer_;
@@ -13,6 +13,6 @@ public:
 	void start(Field&);
 	void attach(ILogObserver*) override;
 	void detach(ILogObserver*) override;
-	void notify(IMessage*, int) override;
+	void notify(LogLevel*, int) override;
 };
 
