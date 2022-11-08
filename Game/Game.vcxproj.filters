@@ -21,252 +21,246 @@
     <ClCompile Include="Main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
+    <ClCompile Include="Game\Components\Player\Player.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Field.cpp">
+    <ClCompile Include="Game\Components\Field\Field.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Menu.cpp">
+    <ClCompile Include="Game\Components\Window\FieldMenu\Menu.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="InputListener.cpp">
+    <ClCompile Include="Game\Components\InputListener\InputListener.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Logic.cpp">
+    <ClCompile Include="Game\Components\Logic\Logic.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Cell.cpp">
+    <ClCompile Include="Game\Components\Field\Cell\Cell.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="FieldView.cpp">
+    <ClCompile Include="Game\Components\Field\FieldView.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CellView.cpp">
+    <ClCompile Include="Game\Components\Field\Cell\CellView.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
+    <ClCompile Include="Game\Game.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerEvent.cpp">
+    <ClCompile Include="Game\Components\Factory\PlayerEvent\PlayerEvent.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="GameEvent.cpp">
+    <ClCompile Include="Game\Components\Factory\GameEvent\GameEvent.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="DamageEvent.cpp">
+    <ClCompile Include="Game\Components\Events\DamageEvent\DamageEvent.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="KeyEvent.cpp">
+    <ClCompile Include="Game\Components\Events\KeyEvent\KeyEvent.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="SpaceEvent.cpp">
+    <ClCompile Include="Game\Components\Events\SpaceEvent\SpaceEvent.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="WinEvent.cpp">
+    <ClCompile Include="Game\Components\Events\WinEvent\WinEvent.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="LoseEvent.cpp">
+    <ClCompile Include="Game\Components\Events\LoseEvent\LoseEvent.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="HealEvent.cpp">
+    <ClCompile Include="Game\Components\Events\HealEvent\HealEvent.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="WinWindow.cpp">
+    <ClCompile Include="Game\Components\Window\GameEndWindow\WinWindow.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="LoseWindow.cpp">
+    <ClCompile Include="Game\Components\Window\GameEndWindow\LoseWindow.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Controller.cpp">
+    <ClCompile Include="Game\Components\Controller\Controller.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CommandMediator.cpp">
+    <ClCompile Include="Game\Components\Mediator\CommandMediator.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="BaseComponent.cpp">
+    <ClCompile Include="Game\Components\Mediator\BaseComponent.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="LevelRunner.cpp">
+    <ClCompile Include="Game\Components\LevelRunner\LevelRunner.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="FieldEvent.cpp">
+    <ClCompile Include="Game\Components\Factory\FieldEvent\FieldEvent.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="ErrLevel.cpp">
+    <ClCompile Include="Game\Components\Logger\LogLevels\ErrLevel.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
-    <ClCompile Include="GameLevel.cpp">
+    <ClCompile Include="Game\Components\Logger\LogLevels\GameLevel.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
-    <ClCompile Include="Logger.cpp">
+    <ClCompile Include="Game\Components\Logger\LogLevels\InfoLevel.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
-    <ClCompile Include="InfoLevel.cpp">
+    <ClCompile Include="Game\Components\Logger\Messages\ErrMessage.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
-    <ClCompile Include="ErrMessage.cpp">
+    <ClCompile Include="Game\Components\Logger\Messages\GameMessage.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
-    <ClCompile Include="GameMessage.cpp">
+    <ClCompile Include="Game\Components\Logger\Messages\InfoMessage.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
-    <ClCompile Include="InfoMessage.cpp">
+    <ClCompile Include="Game\Components\Logger\ConsoleLog.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
-    <ClCompile Include="ConsoleLog.cpp">
+    <ClCompile Include="Game\Components\Logger\FileLog.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
-    <ClCompile Include="FileLog.cpp">
+    <ClCompile Include="Game\Components\Logger\LogObserver\LogObserver.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
-    <ClCompile Include="LogObserver.cpp">
-      <Filter>Logger</Filter>
-    </ClCompile>
-    <ClCompile Include="LogMenu.cpp">
+    <ClCompile Include="Game\Components\Window\LogMenu\LogMenu.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Player.h">
+    <ClInclude Include="Game\Components\Player\Player.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Field.h">
+    <ClInclude Include="Game\Components\Field\Field.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Menu.h">
+    <ClInclude Include="Game\Components\Window\FieldMenu\Menu.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="InputListener.h">
+    <ClInclude Include="Game\Components\InputListener\InputListener.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Logic.h">
+    <ClInclude Include="Game\Components\Logic\Logic.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Cell.h">
+    <ClInclude Include="Game\Components\Field\Cell\Cell.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="FieldView.h">
+    <ClInclude Include="Game\Components\Field\FieldView.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="CellView.h">
+    <ClInclude Include="Game\Components\Field\Cell\CellView.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Event.h">
+    <ClInclude Include="Game\Components\Events\Event.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Mytypes.h">
+    <ClInclude Include="Game\Mytypes.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="CellEvent.h">
+    <ClInclude Include="Game\Game.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
+    <ClInclude Include="Game\Components\Factory\PlayerEvent\PlayerEvent.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerEvent.h">
+    <ClInclude Include="Game\Components\Factory\GameEvent\GameEvent.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="GameEvent.h">
+    <ClInclude Include="Game\Components\Events\DamageEvent\DamageEvent.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="DamageEvent.h">
+    <ClInclude Include="Game\Components\Events\KeyEvent\KeyEvent.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="KeyEvent.h">
+    <ClInclude Include="Game\Components\Events\SpaceEvent\SpaceEvent.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="SpaceEvent.h">
+    <ClInclude Include="Game\Components\Events\WinEvent\WinEvent.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="WinEvent.h">
+    <ClInclude Include="Game\Components\Events\LoseEvent\LoseEvent.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="LoseEvent.h">
+    <ClInclude Include="Game\Components\Events\HealEvent\HealEvent.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="HealEvent.h">
+    <ClInclude Include="Game\Components\Window\GameEndWindow\WinWindow.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="WinWindow.h">
+    <ClInclude Include="Game\Components\Window\GameEndWindow\LoseWindow.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="LoseWindow.h">
+    <ClInclude Include="Game\Components\Controller\Controller.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Controller.h">
+    <ClInclude Include="Game\Components\Mediator\Mediator.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Mediator.h">
+    <ClInclude Include="Game\Components\Mediator\CommandMediator.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="CommandMediator.h">
+    <ClInclude Include="Game\Components\Mediator\BaseComponent.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="BaseComponent.h">
+    <ClInclude Include="Game\Components\Observer\IObserver.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="IObserver.h">
+    <ClInclude Include="Game\Components\Observer\ISubject.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="ISubject.h">
+    <ClInclude Include="Game\Components\LevelRunner\LevelRunner.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="LevelRunner.h">
+    <ClInclude Include="Game\Components\Factory\AbstractEventFactory.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="AbstractEventFactory.h">
+    <ClInclude Include="Game\Components\Factory\FieldEvent\FieldEvent.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="FieldEvent.h">
+    <ClInclude Include="Game\Components\Window\Window.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Window.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="ErrLevel.h">
+    <ClInclude Include="Game\Components\Logger\LogLevels\ErrLevel.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="InfoLevel.h">
+    <ClInclude Include="Game\Components\Logger\LogLevels\InfoLevel.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="Logger.h">
+    <ClInclude Include="Game\Components\Logger\Logger.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="GameLevel.h">
+    <ClInclude Include="Game\Components\Logger\LogLevels\GameLevel.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="LogLevel.h">
+    <ClInclude Include="Game\Components\Logger\LogLevels\LogLevel.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="IMessage.h">
+    <ClInclude Include="Game\Components\Logger\Messages\IMessage.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="ErrMessage.h">
+    <ClInclude Include="Game\Components\Logger\Messages\ErrMessage.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="GameMessage.h">
+    <ClInclude Include="Game\Components\Logger\Messages\GameMessage.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="InfoMessage.h">
+    <ClInclude Include="Game\Components\Logger\Messages\InfoMessage.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="ConsoleLog.h">
+    <ClInclude Include="Game\Components\Logger\ConsoleLog.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="FileLog.h">
+    <ClInclude Include="Game\Components\Logger\FileLog.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="LogObserver.h">
+    <ClInclude Include="Game\Components\Logger\LogObserver\LogObserver.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="ILogObserver.h">
+    <ClInclude Include="Game\Components\Logger\LogObserver\ILogObserver.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="ILogSubject.h">
+    <ClInclude Include="Game\Components\Logger\LogObserver\ILogSubject.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="LogMenu.h">
+    <ClInclude Include="Game\Components\Window\LogMenu\LogMenu.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
