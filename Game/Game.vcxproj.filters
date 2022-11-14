@@ -27,7 +27,7 @@
     <ClCompile Include="Game\Components\Field\Field.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Game\Components\Window\FieldMenu\Menu.cpp">
+    <ClCompile Include="Settings\FieldMenu\FieldSettings.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Game\Components\InputListener\InputListener.cpp">
@@ -120,7 +120,13 @@
     <ClCompile Include="Game\Components\Logger\LogObserver\LogObserver.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
-    <ClCompile Include="Game\Components\Window\LogMenu\LogMenu.cpp">
+    <ClCompile Include="Settings\LogMenu\LogMenu.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Menu.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings\Settings.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -131,7 +137,7 @@
     <ClInclude Include="Game\Components\Field\Field.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Game\Components\Window\FieldMenu\Menu.h">
+    <ClInclude Include="Settings\FieldMenu\FieldSettings.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Game\Components\InputListener\InputListener.h">
@@ -260,7 +266,13 @@
     <ClInclude Include="Game\Components\Logger\LogObserver\ILogSubject.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="Game\Components\Window\LogMenu\LogMenu.h">
+    <ClInclude Include="Settings\LogMenu\LogMenu.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Menu.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings\Settings.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

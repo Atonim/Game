@@ -4,5 +4,5 @@ void WinWindow::run()
 {
 	system("cls");
 	std::cout << "YOU WIN\n";
-	std::cin;
+	_getch();
 }

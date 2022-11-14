@@ -1,5 +1,5 @@
 #pragma once
-#include "Components/Window/FieldMenu/Menu.h"
+#include "../Settings/FieldMenu/FieldSettings.h"
 #include "Components/InputListener/InputListener.h"
 #include "Components/Logic/Logic.h"
 #include "Components/Field/Field.h"
@@ -9,10 +9,10 @@
 #include "Components/Controller/Controller.h"
 #include "Components/LevelRunner/LevelRunner.h"
 #include "Components/Logger/LogObserver/LogObserver.h"
-#include "Components/Window/LogMenu/LogMenu.h"
+#include "../Settings/LogMenu/LogMenu.h"
 class Game
 {
 public:
-	void run();
+	void run(LogObserver*, Field*);
 };
 

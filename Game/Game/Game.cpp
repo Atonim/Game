@@ -1,17 +1,12 @@
 #include "Game.h"
 
-void Game::run()
+void Game::run(LogObserver* observer, Field* field)
 {
-
-	//наблюдатель для логгера
-	LogObserver* observer = new LogObserver;
 	
 
-	//настройка логирования
-	LogMenu logMenu(observer);
-	logMenu.run();
+	
 
-	Field* field = new Field;
+
 	InputListener* listener = new InputListener;
 	Controller* controller = new Controller(field);
 	CommandMediator* commandMediator = new CommandMediator(controller, listener);
@@ -24,13 +19,13 @@ void Game::run()
 
 	Player* player = new Player;
 
-	Menu menu;
-	observer->addSubject(&menu);				//оформляем подписку логгера на меню
+	
+	//observer->addSubject(&field_settings);			//оформляем подписку логгера на меню
 	observer->addSubject(logic);				//на логику событий
 	observer->addSubject(levelRunner);			//на процесс цикла игры
 
 	FieldView fieldView;
-	menu.start(*field);
+	
 
 	
 	
@@ -51,7 +46,6 @@ void Game::run()
 	delete commandMediator;
 	delete controller;
 	delete listener;
-	delete field;
 
 	//delete errMes;
 	//delete gameMes;

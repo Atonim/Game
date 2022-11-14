@@ -1,5 +1,5 @@
-#include "Menu.h"
-void Menu::start(Field& field) {
+#include "FieldSettings.h"
+void FieldSettings::start(Field& field) {
 	system("cls");
 	char set;
 	std::cout << "- Press '1' to set map size (Size must be 10-15)\n- Press any button to continue with default map (10x10)\n";
@@ -48,17 +48,17 @@ void Menu::start(Field& field) {
 	getchar();
 }
 
-void Menu::attach(ILogObserver* observer)
+void FieldSettings::attach(ILogObserver* observer)
 {
 	list_observer_.push_back(observer);
 }
 
-void Menu::detach(ILogObserver* observer)
+void FieldSettings::detach(ILogObserver* observer)
 {
 	list_observer_.remove(observer);
 }
 
-void Menu::notify(LogLevel* messagelvl, int key)
+void FieldSettings::notify(LogLevel* messagelvl, int key)
 {
 	std::list<ILogObserver*>::iterator iterator = list_observer_.begin();
 	while (iterator != list_observer_.end()) {
