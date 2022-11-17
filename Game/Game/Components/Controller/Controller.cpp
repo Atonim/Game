@@ -39,7 +39,7 @@ void Controller::run(eDirection command)
 	case EXIT:
 		notify();
 		break;
-	case ACTIVITY:
+	case ABILITY:
 		notify();
 		break;
 	}

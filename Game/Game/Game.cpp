@@ -8,6 +8,7 @@ void Game::run(LogObserver* observer, Field* field)
 
 
 	InputListener* listener = new InputListener;
+	listener->addControlReader(new FileControlReader);
 	Controller* controller = new Controller(field);
 	CommandMediator* commandMediator = new CommandMediator(controller, listener);
 	Logic* logic = new Logic;

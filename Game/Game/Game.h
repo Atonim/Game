@@ -10,6 +10,7 @@
 #include "Components/LevelRunner/LevelRunner.h"
 #include "Components/Logger/LogObserver/LogObserver.h"
 #include "../Settings/LogMenu/LogMenu.h"
+#include "Components/ControlReader/FileControlReader.h"
 class Game
 {
 public:

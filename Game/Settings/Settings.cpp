@@ -72,6 +72,8 @@ void Settings::run(LogObserver* observer, Field* field)
 			case 2:
 			{
 				PlaySound(TEXT("Music/menu_enter.wav"), NULL, SND_ASYNC | SND_NODEFAULT);
+				ControlMenu controlMenu;
+				controlMenu.run();
 				break;
 			}
 			case 3:

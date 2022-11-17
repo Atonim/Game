@@ -4,30 +4,26 @@ void InputListener::listen()
 {
 	command = STOP;
 	if (_kbhit()) {
-		switch (_getch()) {
-		case 'w':
-			command = UP;
-			break;
-		case 'a':
-			command = LEFT;
-			break;
-		case 's':
-			command = DOWN;
-			break;
-		case 'd':
-			command = RIGHT;
-			break;
-		case 'x':
-			command = EXIT;
-			break;
-		case 'g':
-			command = ACTIVITY;
-			break;
+		char key = _getch();
+		for (auto elem : readers) {
+			command = elem->read(key);
 		}
+		
 	}
 	CommandMediator* mediator = dynamic_cast<CommandMediator*>(mediator_);
 	mediator->setCommand(command);
 	mediator->notify();
+}
+
+void InputListener::addControlReader(IControlReader* reader)
+{
+	readers.push_back(reader);
+}
+
+InputListener::~InputListener()
+{
+	for (auto elem : readers)
+		delete elem;
 }
 
 

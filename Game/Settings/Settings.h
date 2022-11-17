@@ -5,6 +5,7 @@
 #include <conio.h>
 #include "../Settings/LogMenu/LogMenu.h"
 #include "FieldMenu/FieldSettings.h"
+#include "ControlMenu/ControlMenu.h"
 #include "../Game/Components/Field/Field.h"
 class Settings
 {

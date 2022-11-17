@@ -129,6 +129,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game\Components\ControlReader\FileControlReader.cpp" />
+    <ClCompile Include="Settings\ControlMenu\ControlMenu.cpp" />
     <ClCompile Include="Game\Components\Field\Cell\Cell.cpp" />
     <ClCompile Include="Game\Components\Field\Cell\CellView.cpp" />
     <ClCompile Include="Game\Components\Mediator\BaseComponent.cpp" />
@@ -168,6 +170,9 @@
     <ClCompile Include="Settings\Settings.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game\Components\ControlReader\FileControlReader.h" />
+    <ClInclude Include="Game\Components\ControlReader\IControlReader.h" />
+    <ClInclude Include="Settings\ControlMenu\ControlMenu.h" />
     <ClInclude Include="Game\Components\Factory\AbstractEventFactory.h" />
     <ClInclude Include="Game\Components\Field\Cell\Cell.h" />
     <ClInclude Include="Game\Components\Field\Cell\CellView.h" />
@@ -216,6 +221,9 @@
     <ClInclude Include="Game\Components\Window\GameEndWindow\WinWindow.h" />
     <ClInclude Include="Menu\Menu.h" />
     <ClInclude Include="Settings\Settings.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Control\Control.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -12,6 +12,7 @@ void Menu::ConsoleCursorVisible(bool show, short size)
 	SetConsoleCursorInfo(hStdOut, &structCursorInfo);
 }
 void Menu::run() {
+	
 	SetConsoleTitle(L"MINOTAURUS"); //название консоли
 	system("CLS");
 	ConsoleCursorVisible(false, 100); //убираем курсор
@@ -64,11 +65,11 @@ void Menu::run() {
 			}
 			break;
 		case ENTER:
+			PlaySound(TEXT("Music/menu_enter.wav"), NULL, SND_ASYNC | SND_NODEFAULT);
 			switch (active_menu)
 			{
 			case 0:
 			{
-				PlaySound(TEXT("Music/menu_enter.wav"), NULL, SND_ASYNC | SND_NODEFAULT);
 				Game game;
 				game.run(&observer, &field);
 				system("CLS");
@@ -76,12 +77,11 @@ void Menu::run() {
 			}
 			case 1:
 			{
-				PlaySound(TEXT("Music/menu_enter.wav"), NULL, SND_ASYNC | SND_NODEFAULT);
 				break;
 			}
 			case 2:
 			{
-				PlaySound(TEXT("Music/menu_enter.wav"), NULL, SND_ASYNC | SND_NODEFAULT);
+				
 				Settings settings;
 				settings.run(&observer, &field);
 				system("CLS");
@@ -94,5 +94,4 @@ void Menu::run() {
 		}
 		
 	}
-	_getch();
 }
