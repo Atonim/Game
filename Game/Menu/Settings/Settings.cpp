@@ -1,16 +1,16 @@
 #include "Settings.h"
-void Settings::GoToXY(short x, short y)
-{
-	SetConsoleCursorPosition(hStdOut, { x, y });
-}
-void Settings::ConsoleCursorVisible(bool show, short size)
-{
-	CONSOLE_CURSOR_INFO structCursorInfo;
-	GetConsoleCursorInfo(hStdOut, &structCursorInfo);
-	structCursorInfo.bVisible = show; // изменяем видимость курсора
-	structCursorInfo.dwSize = size; // изменяем размер курсора
-	SetConsoleCursorInfo(hStdOut, &structCursorInfo);
-}
+//void Settings::GoToXY(short x, short y)
+//{
+//	SetConsoleCursorPosition(hStdOut, { x, y });
+//}
+//void Settings::ConsoleCursorVisible(bool show, short size)
+//{
+//	CONSOLE_CURSOR_INFO structCursorInfo;
+//	GetConsoleCursorInfo(hStdOut, &structCursorInfo);
+//	structCursorInfo.bVisible = show; // изменяем видимость курсора
+//	structCursorInfo.dwSize = size; // изменяем размер курсора
+//	SetConsoleCursorInfo(hStdOut, &structCursorInfo);
+//}
 void Settings::run(LogObserver* observer, Field* field, IControlReader* control_reader)
 {
 	system("CLS");

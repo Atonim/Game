@@ -130,7 +130,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Game\Components\ControlReader\FileControlReader.cpp" />
-    <ClCompile Include="Settings\ControlMenu\ControlMenu.cpp" />
+    <ClCompile Include="Menu\Menu.cpp" />
+    <ClCompile Include="Menu\Settings\ControlMenu\ControlMenu.cpp" />
     <ClCompile Include="Game\Components\Field\Cell\Cell.cpp" />
     <ClCompile Include="Game\Components\Field\Cell\CellView.cpp" />
     <ClCompile Include="Game\Components\Mediator\BaseComponent.cpp" />
@@ -154,25 +155,26 @@
     <ClCompile Include="Game\Components\Events\KeyEvent\KeyEvent.cpp" />
     <ClCompile Include="Game\Components\LevelRunner\LevelRunner.cpp" />
     <ClCompile Include="Game\Components\Logic\Logic.cpp" />
-    <ClCompile Include="Settings\LogMenu\LogMenu.cpp" />
+    <ClCompile Include="Menu\Settings\LogMenu\LogMenu.cpp" />
     <ClCompile Include="Game\Components\Logger\LogObserver\LogObserver.cpp" />
     <ClCompile Include="Game\Components\Events\LoseEvent\LoseEvent.cpp" />
     <ClCompile Include="Game\Components\Window\GameEndWindow\LoseWindow.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Game\Components\Field\Field.cpp" />
-    <ClCompile Include="Settings\FieldMenu\FieldSettings.cpp" />
+    <ClCompile Include="Menu\Settings\FieldMenu\FieldSettings.cpp" />
     <ClCompile Include="Game\Components\Player\Player.cpp" />
     <ClCompile Include="Game\Components\Factory\PlayerEvent\PlayerEvent.cpp" />
     <ClCompile Include="Game\Components\Events\SpaceEvent\SpaceEvent.cpp" />
     <ClCompile Include="Game\Components\Events\WinEvent\WinEvent.cpp" />
     <ClCompile Include="Game\Components\Window\GameEndWindow\WinWindow.cpp" />
-    <ClCompile Include="Menu\Menu.cpp" />
-    <ClCompile Include="Settings\Settings.cpp" />
+    <ClCompile Include="Menu\StartMenu.cpp" />
+    <ClCompile Include="Menu\Settings\Settings.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\Components\ControlReader\FileControlReader.h" />
     <ClInclude Include="Game\Components\ControlReader\IControlReader.h" />
-    <ClInclude Include="Settings\ControlMenu\ControlMenu.h" />
+    <ClInclude Include="Menu\Menu.h" />
+    <ClInclude Include="Menu\Settings\ControlMenu\ControlMenu.h" />
     <ClInclude Include="Game\Components\Factory\AbstractEventFactory.h" />
     <ClInclude Include="Game\Components\Field\Cell\Cell.h" />
     <ClInclude Include="Game\Components\Field\Cell\CellView.h" />
@@ -203,7 +205,7 @@
     <ClInclude Include="Game\Components\LevelRunner\LevelRunner.h" />
     <ClInclude Include="Game\Components\Logger\Logger.h" />
     <ClInclude Include="Game\Components\Logger\LogLevels\LogLevel.h" />
-    <ClInclude Include="Settings\LogMenu\LogMenu.h" />
+    <ClInclude Include="Menu\Settings\LogMenu\LogMenu.h" />
     <ClInclude Include="Game\Components\Logger\LogObserver\LogObserver.h" />
     <ClInclude Include="Game\Components\Events\LoseEvent\LoseEvent.h" />
     <ClInclude Include="Game\Components\Window\GameEndWindow\LoseWindow.h" />
@@ -212,15 +214,15 @@
     <ClInclude Include="Game\Components\InputListener\InputListener.h" />
     <ClInclude Include="Game\Components\Logic\Logic.h" />
     <ClInclude Include="Game\Components\Field\Field.h" />
-    <ClInclude Include="Settings\FieldMenu\FieldSettings.h" />
+    <ClInclude Include="Menu\Settings\FieldMenu\FieldSettings.h" />
     <ClInclude Include="Game\Components\Player\Player.h" />
     <ClInclude Include="Game\Components\Factory\PlayerEvent\PlayerEvent.h" />
     <ClInclude Include="Game\Components\Events\SpaceEvent\SpaceEvent.h" />
     <ClInclude Include="Game\Components\Window\Window.h" />
     <ClInclude Include="Game\Components\Events\WinEvent\WinEvent.h" />
     <ClInclude Include="Game\Components\Window\GameEndWindow\WinWindow.h" />
-    <ClInclude Include="Menu\Menu.h" />
-    <ClInclude Include="Settings\Settings.h" />
+    <ClInclude Include="Menu\StartMenu.h" />
+    <ClInclude Include="Menu\Settings\Settings.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Control\Control.txt" />

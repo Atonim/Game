@@ -1,16 +1,5 @@
 #include "ControlMenu.h"
-void ControlMenu::GoToXY(short x, short y)
-{
-	SetConsoleCursorPosition(hStdOut, { x, y });
-}
-void ControlMenu::ConsoleCursorVisible(bool show, short size)
-{
-	CONSOLE_CURSOR_INFO structCursorInfo;
-	GetConsoleCursorInfo(hStdOut, &structCursorInfo);
-	structCursorInfo.bVisible = show; // изменяем видимость курсора
-	structCursorInfo.dwSize = size; // изменяем размер курсора
-	SetConsoleCursorInfo(hStdOut, &structCursorInfo);
-}
+
 std::string ControlMenu::getTextForEnum(eDirection type)
 {
 	switch (type) {
@@ -85,27 +74,7 @@ ControlMenu::~ControlMenu()
 {
 	update();
 }
-//void ControlMenu::free_file()
-//{
-//	file.close();
-//	control_reader->update(control);
-//}
-//void ControlMenu::enable_file_output()
-//{
-//	if (file.is_open()) {
-//		file.close();
-//	}
-//
-//	file.open(file_path, std::ios_base::in | std::ios_base::out);
-//	if (file.fail()) {
-//		printf("[LOGGER] Failed to open file at %s", file_path);
-//	}
-//}
-//void ControlMenu::set_file_output()
-//{
-//	file_path = "Control/Control.txt";
-//	enable_file_output();
-//}
+
 void ControlMenu::run()
 {
 	

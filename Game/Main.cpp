@@ -1,9 +1,9 @@
 
 #include <iostream>
-#include "Menu/Menu.h"
+#include "Menu/StartMenu.h"
 
 int main() {
-	Menu menu;
+	StartMenu menu;
 	menu.run();
 	return 0;
 }

@@ -27,7 +27,7 @@
     <ClCompile Include="Game\Components\Field\Field.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Settings\FieldMenu\FieldSettings.cpp">
+    <ClCompile Include="Menu\Settings\FieldMenu\FieldSettings.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Game\Components\InputListener\InputListener.cpp">
@@ -120,19 +120,22 @@
     <ClCompile Include="Game\Components\Logger\LogObserver\LogObserver.cpp">
       <Filter>Logger</Filter>
     </ClCompile>
-    <ClCompile Include="Settings\LogMenu\LogMenu.cpp">
+    <ClCompile Include="Menu\Settings\LogMenu\LogMenu.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\Menu.cpp">
+    <ClCompile Include="Menu\StartMenu.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Settings\Settings.cpp">
+    <ClCompile Include="Menu\Settings\Settings.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Settings\ControlMenu\ControlMenu.cpp">
+    <ClCompile Include="Menu\Settings\ControlMenu\ControlMenu.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Game\Components\ControlReader\FileControlReader.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Menu.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -143,7 +146,7 @@
     <ClInclude Include="Game\Components\Field\Field.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Settings\FieldMenu\FieldSettings.h">
+    <ClInclude Include="Menu\Settings\FieldMenu\FieldSettings.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Game\Components\InputListener\InputListener.h">
@@ -272,22 +275,25 @@
     <ClInclude Include="Game\Components\Logger\LogObserver\ILogSubject.h">
       <Filter>Logger</Filter>
     </ClInclude>
-    <ClInclude Include="Settings\LogMenu\LogMenu.h">
+    <ClInclude Include="Menu\Settings\LogMenu\LogMenu.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\Menu.h">
+    <ClInclude Include="Menu\StartMenu.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Settings\Settings.h">
+    <ClInclude Include="Menu\Settings\Settings.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Settings\ControlMenu\ControlMenu.h">
+    <ClInclude Include="Menu\Settings\ControlMenu\ControlMenu.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Game\Components\ControlReader\FileControlReader.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Game\Components\ControlReader\IControlReader.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Menu.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
