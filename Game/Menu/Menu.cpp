@@ -27,7 +27,8 @@ void Menu::run() {
 	//поле
 	Field field;
 
-
+	//контроллер
+	FileControlReader control_reader;
 	
 
 	
@@ -71,7 +72,7 @@ void Menu::run() {
 			case 0:
 			{
 				Game game;
-				game.run(&observer, &field);
+				game.run(&observer, &field, &control_reader);
 				system("CLS");
 				break;
 			}
@@ -83,11 +84,12 @@ void Menu::run() {
 			{
 				
 				Settings settings;
-				settings.run(&observer, &field);
+				settings.run(&observer, &field, &control_reader);
 				system("CLS");
 				break;
 			}
 			case 3:
+				control_reader.change_file();
 				exit(0);
 			}
 			break;

@@ -10,10 +10,10 @@
 #include "Components/LevelRunner/LevelRunner.h"
 #include "Components/Logger/LogObserver/LogObserver.h"
 #include "../Settings/LogMenu/LogMenu.h"
-#include "Components/ControlReader/FileControlReader.h"
+#include "Components/ControlReader/IControlReader.h"
 class Game
 {
 public:
-	void run(LogObserver*, Field*);
+	void run(LogObserver*, Field*, IControlReader*);
 };
 

@@ -7,6 +7,7 @@
 #include "../Settings/Settings.h"
 #include "../Game/Components/Logger/LogObserver/LogObserver.h"
 #include "../Game/Components/Field/Field.h"
+#include "../Game/Components/ControlReader/FileControlReader.h"
 class Menu : public Window
 {
 	HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);

@@ -1,6 +1,6 @@
 #include "Game.h"
 
-void Game::run(LogObserver* observer, Field* field)
+void Game::run(LogObserver* observer, Field* field, IControlReader* control_reader)
 {
 	
 
@@ -8,7 +8,7 @@ void Game::run(LogObserver* observer, Field* field)
 
 
 	InputListener* listener = new InputListener;
-	listener->addControlReader(new FileControlReader);
+	listener->addControlReader(control_reader);
 	Controller* controller = new Controller(field);
 	CommandMediator* commandMediator = new CommandMediator(controller, listener);
 	Logic* logic = new Logic;
@@ -40,15 +40,10 @@ void Game::run(LogObserver* observer, Field* field)
 		logic->start(*field, *player);			// запуск событий
 	}
 
-
 	delete player;
 	delete logic;
 	delete levelRunner;
 	delete commandMediator;
 	delete controller;
 	delete listener;
-
-	//delete errMes;
-	//delete gameMes;
-	//delete infoMes;
 }

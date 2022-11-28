@@ -11,7 +11,7 @@ void Settings::ConsoleCursorVisible(bool show, short size)
 	structCursorInfo.dwSize = size; // изменяем размер курсора
 	SetConsoleCursorInfo(hStdOut, &structCursorInfo);
 }
-void Settings::run(LogObserver* observer, Field* field)
+void Settings::run(LogObserver* observer, Field* field, IControlReader* control_reader)
 {
 	system("CLS");
 	ConsoleCursorVisible(false, 100); //убираем курсор
@@ -72,7 +72,7 @@ void Settings::run(LogObserver* observer, Field* field)
 			case 2:
 			{
 				PlaySound(TEXT("Music/menu_enter.wav"), NULL, SND_ASYNC | SND_NODEFAULT);
-				ControlMenu controlMenu;
+				ControlMenu controlMenu(control_reader->getControl());
 				controlMenu.run();
 				break;
 			}

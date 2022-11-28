@@ -11,29 +11,45 @@ void ControlMenu::ConsoleCursorVisible(bool show, short size)
 	structCursorInfo.dwSize = size; // изменяем размер курсора
 	SetConsoleCursorInfo(hStdOut, &structCursorInfo);
 }
-void ControlMenu::change_file()
+std::string ControlMenu::getTextForEnum(eDirection type)
 {
-	if (file.is_open()) {
-		file.close();
+	switch (type) {
+	case eDirection::UP:
+		return "UP";
+	case eDirection::LEFT:
+		return "LEFT";
+	case eDirection::RIGHT:
+		return "RIGHT";
+	case eDirection::DOWN:
+		return "DOWN";
+	case eDirection::ABILITY:
+		return "ABILITY";
+	case eDirection::EXIT:
+		return "EXIT";
+	default:
+		return "STOP";
 	}
-
-	file.open(file_path, std::ios_base::out);
-	if (file.fail()) {
-		printf("[LOGGER] Failed to open file at %s", file_path);
+}
+void ControlMenu::update()
+{
+	for (int i = 0; i < settings_key.size(); i++) {
+		control->at(i).first = settings_key[i];
 	}
-	if (file.is_open()) {
-		file.seekp(std::ios::beg);
-		for (int i = 0; i < size(settings_key); i++)
-			file << settings_str[i] << " " << settings_key[i] << " " << i+1 << "\n";
-		if (file.bad())
-			printf("Error");
-		else
-			printf("Settings have been updated!");
-		_getch();
-		system("CLS");
-	}
+		//control->at(settings_key[i]) = eDirection(settings_enum[i]);
 	
-	
+}
+void ControlMenu::read()
+{
+	std::string command_str;
+	char command_key;
+	int command_enum;
+	for (int i = 0; i < control->size(); i++) {  // выводим их
+		/*std::cout << control->at(i).first << " " << control->at(i).second << std::endl;*/
+		settings_str.push_back(getTextForEnum(control->at(i).second));
+		settings_key.push_back(control->at(i).first);
+		settings_enum.push_back(control->at(i).second);
+	}
+	settings_str.push_back("<- Back");
 }
 void ControlMenu::drawMenu()
 {
@@ -61,55 +77,41 @@ void ControlMenu::drawMenu()
 			std::cout << settings_str[i] << "\n";
 	}
 }
-ControlMenu::ControlMenu()
+ControlMenu::ControlMenu(std::vector<std::pair<char, eDirection>>* control)
 {
-	set_file_output();
+	this->control = control;
 }
 ControlMenu::~ControlMenu()
 {
-	change_file();
-	free_file();
+	update();
 }
-void ControlMenu::free_file()
-{
-	file.close();
-}
-void ControlMenu::enable_file_output()
-{
-	if (file.is_open()) {
-		file.close();
-	}
-
-	file.open(file_path, std::ios_base::in | std::ios_base::out);
-	if (file.fail()) {
-		printf("[LOGGER] Failed to open file at %s", file_path);
-	}
-}
-void ControlMenu::set_file_output()
-{
-	file_path = "Control/Control.txt";
-	enable_file_output();
-}
+//void ControlMenu::free_file()
+//{
+//	file.close();
+//	control_reader->update(control);
+//}
+//void ControlMenu::enable_file_output()
+//{
+//	if (file.is_open()) {
+//		file.close();
+//	}
+//
+//	file.open(file_path, std::ios_base::in | std::ios_base::out);
+//	if (file.fail()) {
+//		printf("[LOGGER] Failed to open file at %s", file_path);
+//	}
+//}
+//void ControlMenu::set_file_output()
+//{
+//	file_path = "Control/Control.txt";
+//	enable_file_output();
+//}
 void ControlMenu::run()
 {
 	
 	ConsoleCursorVisible(false, 100); //убираем курсор
-	
-	
-	std::string command_str;
-	char command_key;
-	int command_enum;
-	while (!file.eof()) {
-		file >> command_str >> command_key >> command_enum;
-		if (std::find(settings_str.begin(), settings_str.end(), command_str) == settings_str.end()) {
-			settings_str.push_back(command_str);
-			settings_key.push_back(command_key);
-			settings_enum.push_back(command_enum);
-		}
-	}
-	settings_str.push_back("<- Back");
 
-
+	read();
 	
 	while (settings_active) {
 		

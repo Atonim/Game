@@ -6,7 +6,7 @@ void InputListener::listen()
 	if (_kbhit()) {
 		char key = _getch();
 		for (auto elem : readers) {
-			command = elem->read(key);
+			command = elem->read((char)toupper(key));
 		}
 		
 	}
@@ -22,8 +22,8 @@ void InputListener::addControlReader(IControlReader* reader)
 
 InputListener::~InputListener()
 {
-	for (auto elem : readers)
-		delete elem;
+	/*for (auto elem : readers)
+		delete elem;*/
 }
 
 
