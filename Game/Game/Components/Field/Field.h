@@ -1,35 +1,49 @@
 #pragma once
 #include <vector>
+#include <utility>
 #include "../Player/Player.h"
 #include "Cell/Cell.h"
 
 class Field
 {
-	int size;
-	std::vector<std::vector<Cell*>> mat;
-	std::vector<Cell*> traps;
-	std::vector<Cell*> keys;
-	std::vector<Cell*> walls;
-	int playerX;
-	int playerY;
+	int size;	//размер поля
+
+	std::vector<std::vector<Cell*>> mat;		//матрица клеток
+
+	int trapsAmount;
+	int keysAmount;
+	int wallsAmount;
+
+	std::pair<int, int> playerXY; //координаты игрока
 	
 public:
+	//конструкторы
 	Field(); //коструктор 
-	Field(int); //конструктор с переданными параметрами
 	~Field(); //деструктор
 	Field(const Field&); //конструктор копирования
 	Field& operator =(const Field&);
 	Field(Field&&);
 	Field& operator=(Field&& obj);
-	int getSize();;
-	std::vector<std::vector<Cell*>> getMatrix();
-	int getKeys();
-	int getTraps();
-	int getWalls();
-	int getPlayerX();
-	int getPlayerY();
-	void movePlayerX(int);
-	void movePlayerY(int);
-	//Player* getPlayer();
+
+	//сеттеры
+	void setSize(int);
+	void setHeroSpawn(int, int);
+
+	void setTrapsAmount(int);
+	void setKeysAmount(int);
+	void setWallsAmount(int);
+
+	//геттеры
+	int getSize();
+	std::vector<std::vector<Cell*>>* getMatrix();
+	
+	std::pair<int, int> getPlayerXY();
+
+	int getTrapsAmount();
+	int getWallsAmount();
+	int getKeysAmount();
+
+	//изменение координаты игрока
+	void movePlayerXY(int, int);
 };
 

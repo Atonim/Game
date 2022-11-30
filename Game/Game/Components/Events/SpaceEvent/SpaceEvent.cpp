@@ -2,9 +2,8 @@
 SpaceEvent::SpaceEvent(Field* field) : field_ (field) {}
 void SpaceEvent::trigger()
 {
-	int PlayerX = field_->getPlayerX();
-	int PlayerY = field_->getPlayerY();
-	Cell* playerCell = field_->getMatrix().at(PlayerY).at(PlayerX);
+	std::pair<int, int> PlayerXY = field_->getPlayerXY();
+	Cell* playerCell = field_->getMatrix()->at(PlayerXY.second).at(PlayerXY.first);
 	if (playerCell->getType() == CHEST)
 		playerCell->changeType();
 }

@@ -13,11 +13,11 @@ void StartMenu::run() {
 	//наблюдатель для логгера
 	LogObserver observer;
 
-	//поле
-	Field field;
-
 	//контроллер
 	FileControlReader control_reader;
+
+	//уровень
+	LevelContext context(new EasyLevel);
 	
 	char ch;
 	while (true) {
@@ -57,7 +57,7 @@ void StartMenu::run() {
 			case 0:
 			{
 				Game game;
-				game.run(&observer, &field, &control_reader);
+				game.run(&observer, &control_reader, &context);
 				system("CLS");
 				break;
 			}
@@ -69,7 +69,7 @@ void StartMenu::run() {
 			{
 				
 				Settings settings;
-				settings.run(&observer, &field, &control_reader);
+				settings.run(&observer, &context, &control_reader);
 				system("CLS");
 				break;
 			}

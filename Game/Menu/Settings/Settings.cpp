@@ -11,13 +11,13 @@
 //	structCursorInfo.dwSize = size; // изменяем размер курсора
 //	SetConsoleCursorInfo(hStdOut, &structCursorInfo);
 //}
-void Settings::run(LogObserver* observer, Field* field, IControlReader* control_reader)
+void Settings::run(LogObserver* observer, LevelContext* context, IControlReader* control_reader)
 {
 	system("CLS");
 	ConsoleCursorVisible(false, 100); //убираем курсор
 	bool settings_active = true;
 
-	std::string settings[] = { "Field size", "Logging", "Control", "<- Back" };
+	std::string settings[] = { "Level", "Logging", "Control", "<- Back" };
 	char ch;
 	while (settings_active) {
 		int x = 50, y = 12;
@@ -52,12 +52,8 @@ void Settings::run(LogObserver* observer, Field* field, IControlReader* control_
 		case ENTER:
 			switch (active_menu)
 			{
-			case 0:
-			{
+			case 0: {
 				PlaySound(TEXT("Music/menu_enter.wav"), NULL, SND_ASYNC | SND_NODEFAULT);
-				FieldSettings field_settings;
-				field_settings.start(*field);
-				system("CLS");
 				break;
 			}
 			case 1:

@@ -5,8 +5,9 @@
 #include "../Player/Player.h"
 #include "Cell/Cell.h"
 #include "Cell/CellView.h"
+#include "../../../Menu/Menu.h"
 #include <iostream>
-class FieldView
+class FieldView : public Menu
 {
 	CellView cellView;
 public:

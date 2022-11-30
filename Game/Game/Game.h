@@ -11,9 +11,10 @@
 #include "Components/Logger/LogObserver/LogObserver.h"
 #include "../Menu/Settings/LogMenu/LogMenu.h"
 #include "Components/ControlReader/IControlReader.h"
+#include "Components/LevelContext/LevelContext.h"
 class Game
 {
 public:
-	void run(LogObserver*, Field*, IControlReader*);
+	void run(LogObserver*, IControlReader*, LevelContext*);
 };
 

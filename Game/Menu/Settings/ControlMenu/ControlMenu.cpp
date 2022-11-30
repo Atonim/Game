@@ -29,9 +29,6 @@ void ControlMenu::update()
 }
 void ControlMenu::read()
 {
-	std::string command_str;
-	char command_key;
-	int command_enum;
 	for (int i = 0; i < control->size(); i++) {  // выводим их
 		/*std::cout << control->at(i).first << " " << control->at(i).second << std::endl;*/
 		settings_str.push_back(getTextForEnum(control->at(i).second));

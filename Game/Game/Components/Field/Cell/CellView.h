@@ -2,7 +2,8 @@
 #include <iostream>
 #include "Cell.h"
 #include "../Field.h"
-class CellView
+#include "../../../../Menu/Menu.h"
+class CellView : public Menu
 {
 public:
 	void cellDraw(Cell&);

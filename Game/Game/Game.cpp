@@ -1,11 +1,12 @@
 #include "Game.h"
 
-void Game::run(LogObserver* observer, Field* field, IControlReader* control_reader)
+void Game::run(LogObserver* observer, IControlReader* control_reader, LevelContext* context)
 {
 	
-
 	
+	Field* field = context->createLevel();
 
+	std::cout << "SOZDAL ETU FIGNU" << std::endl;
 
 	InputListener* listener = new InputListener;
 	listener->addControlReader(control_reader);
@@ -21,7 +22,6 @@ void Game::run(LogObserver* observer, Field* field, IControlReader* control_read
 	Player* player = new Player;
 
 	
-	//observer->addSubject(&field_settings);			//оформляем подписку логгера на меню
 	observer->addSubject(logic);				//на логику событий
 	observer->addSubject(levelRunner);			//на процесс цикла игры
 
@@ -34,12 +34,15 @@ void Game::run(LogObserver* observer, Field* field, IControlReader* control_read
 
 
 	levelRunner->start();
+
+	std::cout << "ZAPUSK" << std::endl;
 	while (levelRunner->getProcess()) {			//пока метод класса возвращает true
 		fieldView.DrawField(field, player);		// рисуем поле
 		listener->listen();						// считывание нажатия клавиш (последующее исполнение команд)
 		logic->start(*field, *player);			// запуск событий
 	}
 
+	delete field;
 	delete player;
 	delete logic;
 	delete levelRunner;

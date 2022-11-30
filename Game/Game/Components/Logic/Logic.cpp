@@ -2,9 +2,8 @@
 
 void Logic::start(Field& field, Player& player)
 {
-	int playerX = field.getPlayerX();
-	int playerY = field.getPlayerY();
-	Cell* playerCell = field.getMatrix().at(playerY).at(playerX);
+	std::pair<int, int> playerXY = field.getPlayerXY();
+	Cell* playerCell = field.getMatrix()->at(playerXY.second).at(playerXY.first);
 	//AbstractEventFactory* factory;
 	//фабрика глобального события
 	if (player.getHealth() == 0) {
@@ -14,7 +13,7 @@ void Logic::start(Field& field, Player& player)
 		factory->createSecEvent()->trigger();
 		delete factory;
 	}
-	else if (player.getKeys() == field.getKeys()) {
+	else if (player.getKeys() == field.getKeysAmount()) {
 		this->notify(new InfoLevel, VICTORY);
 		this->notify();
 		GameEvent* factory = new GameEvent;
