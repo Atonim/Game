@@ -1,1 +1,1 @@
-![WG6EDxfVhOU](https://user-images.githubusercontent.com/90718189/198126982-bcfaee0d-203c-457c-8289-ef9dc6801e41.jpg)
+![загруженное](https://user-images.githubusercontent.com/90718189/204647384-1815e4b4-3db7-4f4e-ac79-f88a7b7459be.png)
