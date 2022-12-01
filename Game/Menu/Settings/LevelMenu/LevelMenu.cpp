@@ -58,10 +58,12 @@ void LevelMenu::run(LevelContext* context)
 			switch (active_menu) {
 			case 0: {
 				context->setStrategy(new EasyLevel);
+				settings_active = false;
 				break;
 			}
 			case 1: {
 				context->setStrategy(new MediumLevel);
+				settings_active = false;
 				break;
 			}
 			default:

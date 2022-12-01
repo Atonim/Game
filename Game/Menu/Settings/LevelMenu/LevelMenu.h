@@ -9,9 +9,7 @@
 #include "../../../Game/Components/StrategyLevel/MediumLevel/MediumLevel.h"
 class LevelMenu : public Menu
 {
-	char ch, new_ch;
-	int trigger = 0; //проверка на то был ли прожат enter
-	bool input_active = false;
+	char ch;
 	bool settings_active = true;
 	std::vector<std::string>settings_str {"Easy", "Medium", "<- Back"};
 	enum KEYS { ESC = 27, UP = 72, DOWN = 80, ENTER = 13 };
