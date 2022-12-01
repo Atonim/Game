@@ -27,9 +27,6 @@
     <ClCompile Include="Game\Components\Field\Field.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\Settings\FieldMenu\FieldSettings.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Game\Components\InputListener\InputListener.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -150,25 +147,7 @@
     <ClCompile Include="Game\Components\LevelContext\LevelContext.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Game\Components\Rules\HeroSpawn\HeroSpawnRule.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Components\Rules\KeysSpawn\KeysSpawnRule.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Game\Components\LevelGenerator\LevelGenerator.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Components\Rules\ShrineSpawn\ShrineSpawnRule.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Components\Rules\TrapsSpawn\TrapsSpawnRule.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Components\Rules\WallsSpawn\WallsSpawnRule.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Components\Rules\FieldSize\FieldSizeRule.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -177,9 +156,6 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Game\Components\Field\Field.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Menu\Settings\FieldMenu\FieldSettings.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Game\Components\InputListener\InputListener.h">
@@ -363,6 +339,15 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Game\Components\Rules\FieldSize\FieldSizeRule.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Components\Rules\WallsSpawn\WallsSpawnEz.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Components\Rules\TrapsSpawn\TrapsSpawnEz.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Components\Rules\KeysSpawn\KeysSpawnEz.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

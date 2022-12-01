@@ -130,13 +130,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Game\Components\Rules\FieldSize\FieldSizeRule.cpp" />
     <ClCompile Include="Game\Components\StrategyLevel\EasyLevel\EasyLevel.cpp" />
     <ClCompile Include="Game\Components\ControlReader\FileControlReader.cpp" />
     <ClCompile Include="Game\Components\StrategyLevel\MediumLevel\MediumLevel.cpp" />
     <ClCompile Include="Game\Components\LevelContext\LevelContext.cpp" />
-    <ClCompile Include="Game\Components\Rules\HeroSpawn\HeroSpawnRule.cpp" />
-    <ClCompile Include="Game\Components\Rules\KeysSpawn\KeysSpawnRule.cpp" />
     <ClCompile Include="Game\Components\LevelGenerator\LevelGenerator.cpp" />
     <ClCompile Include="Menu\Settings\LevelMenu\LevelMenu.cpp" />
     <ClCompile Include="Menu\Menu.cpp" />
@@ -170,7 +167,6 @@
     <ClCompile Include="Game\Components\Window\GameEndWindow\LoseWindow.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Game\Components\Field\Field.cpp" />
-    <ClCompile Include="Menu\Settings\FieldMenu\FieldSettings.cpp" />
     <ClCompile Include="Game\Components\Player\Player.cpp" />
     <ClCompile Include="Game\Components\Factory\PlayerEvent\PlayerEvent.cpp" />
     <ClCompile Include="Game\Components\Events\SpaceEvent\SpaceEvent.cpp" />
@@ -178,12 +174,11 @@
     <ClCompile Include="Game\Components\Window\GameEndWindow\WinWindow.cpp" />
     <ClCompile Include="Menu\StartMenu.cpp" />
     <ClCompile Include="Menu\Settings\Settings.cpp" />
-    <ClCompile Include="Game\Components\Rules\ShrineSpawn\ShrineSpawnRule.cpp" />
-    <ClCompile Include="Game\Components\Rules\TrapsSpawn\TrapsSpawnRule.cpp" />
-    <ClCompile Include="Game\Components\Rules\WallsSpawn\WallsSpawnRule.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\Components\Rules\FieldSize\FieldSizeRule.h" />
+    <ClInclude Include="Game\Components\Rules\KeysSpawn\KeysSpawnEz.h" />
+    <ClInclude Include="Game\Components\Rules\TrapsSpawn\TrapsSpawnEz.h" />
     <ClInclude Include="Game\Components\StrategyLevel\EasyLevel\EasyLevel.h" />
     <ClInclude Include="Game\Components\ControlReader\FileControlReader.h" />
     <ClInclude Include="Game\Components\ControlReader\IControlReader.h" />
@@ -235,7 +230,6 @@
     <ClInclude Include="Game\Components\InputListener\InputListener.h" />
     <ClInclude Include="Game\Components\Logic\Logic.h" />
     <ClInclude Include="Game\Components\Field\Field.h" />
-    <ClInclude Include="Menu\Settings\FieldMenu\FieldSettings.h" />
     <ClInclude Include="Game\Components\Player\Player.h" />
     <ClInclude Include="Game\Components\Factory\PlayerEvent\PlayerEvent.h" />
     <ClInclude Include="Game\Components\Events\SpaceEvent\SpaceEvent.h" />
@@ -247,6 +241,7 @@
     <ClInclude Include="Game\Components\Rules\ShrineSpawn\ShrineSpawnRule.h" />
     <ClInclude Include="Game\Components\Rules\TrapsSpawn\TrapsSpawnRule.h" />
     <ClInclude Include="Game\Components\Rules\WallsSpawn\WallsSpawnRule.h" />
+    <ClInclude Include="Game\Components\Rules\WallsSpawn\WallsSpawnEz.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Control\Control.txt" />

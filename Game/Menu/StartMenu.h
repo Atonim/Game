@@ -13,7 +13,6 @@
 class StartMenu : public Window, public Menu
 {
 	enum KEYS { ESC = 27, UP = 72, DOWN = 80, ENTER = 13 };
-	int active_menu = 0;
 public:
 	void run() override;
 };

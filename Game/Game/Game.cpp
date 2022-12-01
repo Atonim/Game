@@ -6,8 +6,6 @@ void Game::run(LogObserver* observer, IControlReader* control_reader, LevelConte
 	
 	Field* field = context->createLevel();
 
-	std::cout << "SOZDAL ETU FIGNU" << std::endl;
-
 	InputListener* listener = new InputListener;
 	listener->addControlReader(control_reader);
 	Controller* controller = new Controller(field);
@@ -35,7 +33,7 @@ void Game::run(LogObserver* observer, IControlReader* control_reader, LevelConte
 
 	levelRunner->start();
 
-	std::cout << "ZAPUSK" << std::endl;
+	
 	while (levelRunner->getProcess()) {			//пока метод класса возвращает true
 		fieldView.DrawField(field, player);		// рисуем поле
 		listener->listen();						// считывание нажатия клавиш (последующее исполнение команд)

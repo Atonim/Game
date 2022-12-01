@@ -1,10 +1,10 @@
 #include "Field.h"
 Field::Field() {
-    std::cout << "CONSTRUCT " << this << "\n";
+    //std::cout << "CONSTRUCT " << this << "\n";
 };
 
 Field::~Field() {
-    std::cout << "DELETE " << this << "\n";
+    //std::cout << "DELETE " << this << "\n";
     for (auto row : mat) {
         for (auto elem: row)
             delete elem;
@@ -12,7 +12,7 @@ Field::~Field() {
 }
 Field::Field(const Field& obj)
 {
-    std::cout << "COPY " << this << "\n";
+    //std::cout << "COPY " << this << "\n";
     this->size = obj.size;
     this->playerXY = obj.playerXY;
     this->keysAmount = obj.keysAmount;
@@ -23,7 +23,7 @@ Field::Field(const Field& obj)
 }
 Field& Field::operator=(const Field& obj)
 {
-    std::cout << "OPERATOR COPY " << this << "\n";
+    //std::cout << "OPERATOR COPY " << this << "\n";
     for (auto row : this->mat) {
         for (auto elem : row)
             delete elem;
@@ -40,7 +40,7 @@ Field& Field::operator=(const Field& obj)
 }
 Field::Field(Field&& obj)
 {
-    std::cout << "MOVE " << this << "\n";
+    //std::cout << "MOVE " << this << "\n";
     std::swap(this->size, obj.size);
     std::swap(this->playerXY, obj.playerXY);
     std::swap(this->mat, obj.mat);
@@ -51,7 +51,7 @@ Field::Field(Field&& obj)
 
 Field& Field::operator=(Field&& obj)
 {
-    std::cout << "OPERATOR MOVE " << this << "to" << &obj << "\n";
+    //std::cout << "OPERATOR MOVE " << this << "to" << &obj << "\n";
     if (this != &obj) {
         for (auto row : this->mat) {
             for (auto elem : row)

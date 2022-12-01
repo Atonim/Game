@@ -14,9 +14,9 @@ template<typename ...Rules>
 Field* LevelGenerator<Rules...>::setRules()
 {
 	Field* field = new Field;
-	printf("SOZDAL POLE\n");
+	
 	(establish<Rules>(field), ...);
-	printf("VERNUL POLE\n");
+	
 	return field;
 }
 
@@ -26,5 +26,4 @@ void LevelGenerator<Rules...>::establish(Field* field)
 {
 	RuleType obj;
 	obj.establish(field);
-	printf("RULE\n");
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include "../../Field/Field.h"
+
 template <int amount>
 class WallsSpawnRule
 {
@@ -28,7 +29,7 @@ template<int amount>
 void WallsSpawnRule<amount>::establish(Field* field)
 {
 	field->setWallsAmount(amount);
-	printf("NACAHL STENI\n");
+	
 	for (int i = 0; i < field->getSize(); i++) {
 		for (int j = 0; j < field->getSize(); j++)
 			if (walls[j][i] == 'X') {
@@ -37,6 +38,4 @@ void WallsSpawnRule<amount>::establish(Field* field)
 			}
 				
 	}
-	printf("KONEZ\n");
-
 }

@@ -3,13 +3,13 @@
 #include "../../LevelGenerator/LevelGenerator.h"
 #include "../../Rules/FieldSize/FieldSizeRule.h"
 #include "../../Rules/HeroSpawn/HeroSpawnRule.h"
-#include "../../Rules/KeysSpawn/KeysSpawnRule.h"
+#include "../../Rules/KeysSpawn/KeysSpawnEz.h"
 #include "../../Rules/ShrineSpawn/ShrineSpawnRule.h"
-#include "../../Rules/TrapsSpawn/TrapsSpawnRule.h"
-#include "../../Rules/WallsSpawn/WallsSpawnRule.h"
+#include "../../Rules/TrapsSpawn/TrapsSpawnEz.h"
+#include "../../Rules/WallsSpawn/WallsSpawnEz.h"
 class EasyLevel : public ILevelStrategy
 {
-	LevelGenerator<FieldSizeRule<15>, HeroSpawnRule<0, 0>, ShrineSpawnRule<14,14>, KeysSpawnRule<5>, TrapsSpawnRule<3>, WallsSpawnRule<30>> levelGenerator;
+	LevelGenerator<FieldSizeRule<9>, HeroSpawnRule<1, 7>, ShrineSpawnRule<5,3>, KeysSpawnEz<3>, TrapsSpawnEz<1>, WallsSpawnEz<35>> levelGenerator;
 public:
 	Field* generateLevel() override;
 };

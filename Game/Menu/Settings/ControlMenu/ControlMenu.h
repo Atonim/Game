@@ -18,7 +18,6 @@ class ControlMenu : public Menu
 	std::vector<char>settings_key;
 	std::vector<int>settings_enum;
 	enum KEYS { ESC = 27, UP = 72, DOWN = 80, ENTER = 13 };
-	int active_menu = 0;
 public:
 	ControlMenu(std::vector<std::pair<char, eDirection>>*);
 	~ControlMenu();
