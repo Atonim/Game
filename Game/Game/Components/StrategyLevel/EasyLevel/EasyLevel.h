@@ -7,9 +7,10 @@
 #include "../../Rules/ShrineSpawn/ShrineSpawnRule.h"
 #include "../../Rules/TrapsSpawn/TrapsSpawnEz.h"
 #include "../../Rules/WallsSpawn/WallsSpawnEz.h"
+#include "../../Rules/ShrineSpawn/ShrineSpawnEz.h"
 class EasyLevel : public ILevelStrategy
 {
-	LevelGenerator<HeroSpawnRule<1, 7>, ShrineSpawnRule<5,3>, KeysSpawnEz<3>, FieldSizeRule<9>, TrapsSpawnEz<1>, WallsSpawnEz<35>> levelGenerator;
+	LevelGenerator<ShrineSpawnEz<9>, HeroSpawnRule<0, 1>, FieldSizeRule<9>,  KeysSpawnEz<0>,   TrapsSpawnEz<9>, WallsSpawnEz<9>> levelGenerator;
 public:
 	Field* generateLevel() override;
 };

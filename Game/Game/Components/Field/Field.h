@@ -10,9 +10,9 @@ class Field
 
 	std::vector<std::vector<Cell*>> mat;		//матрица клеток
 
-	int trapsAmount;
+	//int trapsAmount;
 	int keysAmount;
-	int wallsAmount;
+	//int wallsAmount;
 
 	std::pair<int, int> playerXY; //координаты игрока
 	
@@ -29,9 +29,9 @@ public:
 	void setSize(int);
 	void setHeroSpawn(int, int);
 
-	void setTrapsAmount(int);
+	//void setTrapsAmount(int);
 	void setKeysAmount(int);
-	void setWallsAmount(int);
+	//void setWallsAmount(int);
 
 	//геттеры
 	int getSize();
@@ -39,8 +39,8 @@ public:
 	
 	std::pair<int, int> getPlayerXY();
 
-	int getTrapsAmount();
-	int getWallsAmount();
+	//int getTrapsAmount();
+	//int getWallsAmount();
 	int getKeysAmount();
 
 	//изменение координаты игрока

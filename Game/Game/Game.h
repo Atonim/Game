@@ -11,6 +11,7 @@
 #include "../Menu/Settings/LogMenu/LogMenu.h"
 #include "Components/ControlReader/IControlReader.h"
 #include "Components/LevelContext/LevelContext.h"
+#include "Components/FieldChecker/FieldChecker.h"
 class Game
 {
 public:

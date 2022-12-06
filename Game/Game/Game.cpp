@@ -5,7 +5,11 @@ void Game::run(LogObserver* observer, IControlReader* control_reader, LevelConte
 	
 	
 	Field* field = context->createLevel();
-
+	FieldChecker check;
+	if (!check.check(field)) {					//проверка корректной генерации поля
+		delete field;
+		return;
+	}
 	InputListener* listener = new InputListener;
 	listener->addControlReader(control_reader);
 	Controller* controller = new Controller(field);

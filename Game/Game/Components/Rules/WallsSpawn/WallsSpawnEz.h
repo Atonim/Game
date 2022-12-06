@@ -1,7 +1,7 @@
 #pragma once
 #include "../../Field/Field.h"
-
-template <int amount>
+#include <conio.h>
+template <int size>
 class WallsSpawnEz
 {
 	std::vector<std::vector<char>> walls = {
@@ -19,17 +19,17 @@ public:
 	void establish(Field*);
 };
 
-template<int amount>
-void WallsSpawnEz<amount>::establish(Field* field)
+template<int size>
+void WallsSpawnEz<size>::establish(Field* field)
 {
-	if (amount) {
-		field->setWallsAmount(amount);
-
-		for (int i = 0; i < walls.size(); i++) {
-			for (int j = 0; j < walls.size(); j++)
+	if (size == walls.size()) {
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++)
 				if (walls[j][i] == 'X') {
 					if (field->getMatrix()->at(j).at(i)->getType() != SPACE) {
-						printf("[ERROR] Wrong walls generation");
+						system("cls");
+						printf("[ERROR] Inappropriate walls generation");
+						_getch();
 						return;
 					}
 					delete(field->getMatrix()->at(j).at(i));
@@ -38,8 +38,11 @@ void WallsSpawnEz<amount>::establish(Field* field)
 
 		}
 	}
-	else
-		printf("[ERROR] Wrong walls generation");
+	else {
+		system("cls");
+		printf("[ERROR] Inappropriate walls generation");
+		_getch();
+	}
 }
 
 

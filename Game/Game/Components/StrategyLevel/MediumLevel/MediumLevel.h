@@ -9,7 +9,7 @@
 #include "../../Rules/WallsSpawn/WallsSpawnRule.h"
 class MediumLevel : public ILevelStrategy
 {
-	LevelGenerator<FieldSizeRule<15>, HeroSpawnRule<0, 0>, ShrineSpawnRule<14, 14>, KeysSpawnRule<5>, TrapsSpawnRule<3>, WallsSpawnRule<78>> levelGenerator;
+	LevelGenerator<FieldSizeRule<15>, HeroSpawnRule<0, 0>, ShrineSpawnRule<9>, KeysSpawnRule<5>, TrapsSpawnRule<3>, WallsSpawnRule<78>> levelGenerator;
 public:
 	Field* generateLevel() override;
 };

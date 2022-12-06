@@ -1,7 +1,7 @@
 #pragma once
 #include "../../Field/Field.h"
-
-template <int amount>
+#include <conio.h>
+template <int size>
 class TrapsSpawnEz
 {
 	std::vector<std::vector<char>> traps = {
@@ -19,17 +19,17 @@ public:
 	void establish(Field*);
 };
 
-template<int amount>
-void TrapsSpawnEz<amount>::establish(Field* field)
+template<int size>
+void TrapsSpawnEz<size>::establish(Field* field)
 {
-	if (amount) {
-		field->setTrapsAmount(amount);
-
-		for (int i = 0; i < traps.size(); i++) {
-			for (int j = 0; j < traps.size(); j++)
+	if (size == traps.size()) {
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++)
 				if (traps[j][i] == 'X') {
 					if (field->getMatrix()->at(j).at(i)->getType() != SPACE) {
-						printf("[ERROR] Wrong traps generation");
+						system("cls");
+						printf("[ERROR] Inappropriate traps generation");
+						_getch();
 						return;
 					}
 					delete(field->getMatrix()->at(j).at(i));
@@ -38,7 +38,10 @@ void TrapsSpawnEz<amount>::establish(Field* field)
 
 		}
 	}
-	else
-		printf("[ERROR] Wrong traps generation");
+	else {
+		system("cls");
+		printf("[ERROR] Inappropriate traps generation");
+		_getch();
+	}
 	
 }

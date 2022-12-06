@@ -1,50 +1,47 @@
 #pragma once
-#include <vector>
 #include "../../Field/Field.h"
 #include <conio.h>
 template <int size>
-class KeysSpawnEz
+class ShrineSpawnEz
 {
-	int amount = 0;
-	std::vector<std::vector<char>> keys{
-		{' ',' ',' ',' ',' ',' ',' ',' ',' '},
-		{' ','X',' ',' ',' ',' ',' ',' ',' '},
+	std::vector<std::vector<char>> shrine = {
 		{' ',' ',' ',' ',' ',' ',' ',' ',' '},
 		{' ',' ',' ',' ',' ',' ',' ',' ',' '},
 		{' ',' ',' ',' ',' ',' ',' ',' ',' '},
-		{' ',' ',' ','X',' ',' ',' ',' ',' '},
+		{' ',' ',' ',' ',' ','X',' ',' ',' '},
 		{' ',' ',' ',' ',' ',' ',' ',' ',' '},
-		{' ',' ',' ',' ',' ',' ',' ','X',' '},
+		{' ',' ',' ',' ',' ',' ',' ',' ',' '},
+		{' ',' ',' ',' ',' ',' ',' ',' ',' '},
+		{' ',' ',' ',' ',' ',' ',' ',' ',' '},
 		{' ',' ',' ',' ',' ',' ',' ',' ',' '},
 	};
 public:
 	void establish(Field*);
 };
 
-template <int size>
-void KeysSpawnEz<size>::establish(Field* field)
+template<int size>
+void ShrineSpawnEz<size>::establish(Field* field)
 {
-	if (size == keys.size()) {
+	if (size == shrine.size()) {
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++)
-				if (keys[j][i] == 'X') {
+				if (shrine[j][i] == 'X') {
 					if (field->getMatrix()->at(j).at(i)->getType() != SPACE) {
 						system("cls");
-						printf("[ERROR] Inappropriate keys generation");
+						printf("[ERROR] Inappropriate shrine generation");
 						_getch();
 						return;
 					}
 					delete(field->getMatrix()->at(j).at(i));
-					field->getMatrix()->at(j).at(i) = new Cell(CHEST);
-					amount++;
+					field->getMatrix()->at(j).at(i) = new Cell(SHRINE);
 				}
 		}
-		field->setKeysAmount(amount);
 	}
 	else {
 		system("cls");
-		printf("[ERROR] Inappropriate keys generation");
+		printf("[ERROR] Inappropriate shrine generation");
 		_getch();
 	}
-	
+
 }
+

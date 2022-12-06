@@ -23,8 +23,8 @@ Field::Field(const Field& obj)
     this->playerXY = obj.playerXY;
     this->keysAmount = obj.keysAmount;
     this->mat = obj.mat;
-    this->trapsAmount = obj.trapsAmount;
-    this->wallsAmount = obj.wallsAmount;
+    //this->trapsAmount = obj.trapsAmount;
+    //this->wallsAmount = obj.wallsAmount;
 
 }
 Field& Field::operator=(const Field& obj)
@@ -38,8 +38,8 @@ Field& Field::operator=(const Field& obj)
     this->playerXY = obj.playerXY;
     this->keysAmount = obj.keysAmount;
     this->mat = obj.mat;
-    this->trapsAmount = obj.trapsAmount;
-    this->wallsAmount = obj.wallsAmount;
+    //this->trapsAmount = obj.trapsAmount;
+    //this->wallsAmount = obj.wallsAmount;
     
 
     return *this;
@@ -51,8 +51,8 @@ Field::Field(Field&& obj)
     std::swap(this->playerXY, obj.playerXY);
     std::swap(this->mat, obj.mat);
     std::swap(this->keysAmount, obj.keysAmount);
-    std::swap(this->trapsAmount, obj.trapsAmount);
-    std::swap(this->wallsAmount, obj.wallsAmount);
+    //std::swap(this->trapsAmount, obj.trapsAmount);
+    //std::swap(this->wallsAmount, obj.wallsAmount);
 }
 
 Field& Field::operator=(Field&& obj)
@@ -67,8 +67,8 @@ Field& Field::operator=(Field&& obj)
         std::swap(this->playerXY, obj.playerXY);
         std::swap(this->mat, obj.mat);
         std::swap(this->keysAmount, obj.keysAmount);
-        std::swap(this->trapsAmount, obj.trapsAmount);
-        std::swap(this->wallsAmount, obj.wallsAmount);
+        //std::swap(this->trapsAmount, obj.trapsAmount);
+        //std::swap(this->wallsAmount, obj.wallsAmount);
     }
     return *this;
 }
@@ -92,16 +92,16 @@ std::vector<std::vector<Cell*>>* Field::getMatrix()
 {
     return &mat;
 }
-
-int Field::getTrapsAmount()
-{
-    return this->trapsAmount;
-}
-
-int Field::getWallsAmount()
-{
-    return this->wallsAmount;
-}
+//
+//int Field::getTrapsAmount()
+//{
+//    return this->trapsAmount;
+//}
+//
+//int Field::getWallsAmount()
+//{
+//    return this->wallsAmount;
+//}
 
 int Field::getKeysAmount()
 {
@@ -118,18 +118,18 @@ void Field::movePlayerXY(int X, int Y)
     this->playerXY.first = X;
     this->playerXY.second = Y;
 }
-
-void Field::setTrapsAmount(int amount)
-{
-    this->trapsAmount = amount;
-}
+//
+//void Field::setTrapsAmount(int amount)
+//{
+//    this->trapsAmount = amount;
+//}
 
 void Field::setKeysAmount(int amount)
 {
     this->keysAmount = amount;
 }
-
-void Field::setWallsAmount(int amount)
-{
-    this->wallsAmount = amount;
-}
+//
+//void Field::setWallsAmount(int amount)
+//{
+//    this->wallsAmount = amount;
+//}
