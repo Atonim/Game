@@ -10,11 +10,8 @@ public:
 template<int size>
 void FieldSizeRule<size>::establish(Field* field)
 {
-	field->setSize(size);
-	
-	for (int i = 0; i < size; i++) {
-		field->getMatrix()->emplace_back(std::vector<Cell*>());
-		for (int j = 0; j < size; j++)
-			field->getMatrix()->back().emplace_back(new Cell(SPACE));
-	}
+	if (size)
+		field->setSize(size);
+	else
+		printf("[ERROR] Inappropriate field size");
 }

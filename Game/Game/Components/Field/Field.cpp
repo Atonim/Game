@@ -1,6 +1,12 @@
 #include "Field.h"
 Field::Field() {
     //std::cout << "CONSTRUCT " << this << "\n";
+    this->size = 20;
+    for (int i = 0; i < size; i++) {
+        mat.emplace_back(std::vector<Cell*>());
+        for (int j = 0; j < size; j++)
+            mat.back().emplace_back(new Cell(SPACE));
+    }
 };
 
 Field::~Field() {

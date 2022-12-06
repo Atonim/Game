@@ -29,14 +29,23 @@ public:
 template <int amount>
 void KeysSpawnRule<amount>::establish(Field* field)
 {
-	field->setKeysAmount(amount);
-	
-	for (int i = 0; i < field->getSize(); i++) {
-		for (int j = 0; j < field->getSize(); j++)
-			if (keys[j][i] == 'X') {
-				delete(field->getMatrix()->at(j).at(i));
-				field->getMatrix()->at(j).at(i) = new Cell(CHEST);
-			}
-				
+	if (amount) {
+		field->setKeysAmount(amount);
+
+		for (int i = 0; i < keys.size(); i++) {
+			for (int j = 0; j < keys.size(); j++)
+				if (keys[j][i] == 'X') {
+					if (field->getMatrix()->at(j).at(i)->getType() != SPACE) {
+						printf("[ERROR] Wrong keys generation");
+						return;
+					}
+					delete(field->getMatrix()->at(j).at(i));
+					field->getMatrix()->at(j).at(i) = new Cell(CHEST);
+				}
+
+		}
 	}
+	else
+		printf("[ERROR] Wrong keys generation");
+	
 }

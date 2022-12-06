@@ -130,6 +130,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FieldChecker.cpp" />
     <ClCompile Include="Game\Components\StrategyLevel\EasyLevel\EasyLevel.cpp" />
     <ClCompile Include="Game\Components\ControlReader\FileControlReader.cpp" />
     <ClCompile Include="Game\Components\StrategyLevel\MediumLevel\MediumLevel.cpp" />
@@ -176,6 +177,7 @@
     <ClCompile Include="Menu\Settings\Settings.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FieldChecker.h" />
     <ClInclude Include="Game\Components\Rules\FieldSize\FieldSizeRule.h" />
     <ClInclude Include="Game\Components\Rules\KeysSpawn\KeysSpawnEz.h" />
     <ClInclude Include="Game\Components\Rules\TrapsSpawn\TrapsSpawnEz.h" />

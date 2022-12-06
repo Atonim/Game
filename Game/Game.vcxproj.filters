@@ -150,6 +150,9 @@
     <ClCompile Include="Game\Components\LevelGenerator\LevelGenerator.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="FieldChecker.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\Components\Player\Player.h">
@@ -348,6 +351,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Game\Components\Rules\KeysSpawn\KeysSpawnEz.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldChecker.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

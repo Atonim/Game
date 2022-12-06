@@ -9,8 +9,10 @@
 #include "../../Rules/WallsSpawn/WallsSpawnEz.h"
 class EasyLevel : public ILevelStrategy
 {
-	LevelGenerator<FieldSizeRule<9>, HeroSpawnRule<1, 7>, ShrineSpawnRule<5,3>, KeysSpawnEz<3>, TrapsSpawnEz<1>, WallsSpawnEz<35>> levelGenerator;
+	LevelGenerator<HeroSpawnRule<1, 7>, ShrineSpawnRule<5,3>, KeysSpawnEz<3>, FieldSizeRule<9>, TrapsSpawnEz<1>, WallsSpawnEz<35>> levelGenerator;
 public:
 	Field* generateLevel() override;
 };
 
+//проверка на недопустимые значения
+//порядок не важен

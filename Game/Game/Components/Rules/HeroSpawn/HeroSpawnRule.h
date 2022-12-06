@@ -10,5 +10,9 @@ public:
 template<int x, int y>
 void HeroSpawnRule<x, y>::establish(Field* field)
 {
-	field->setHeroSpawn(x, y);
+	
+	if (x < field->getSize() && y < field->getSize() && x >= 0 && y >= 0)
+		field->setHeroSpawn(x, y);
+	else
+		printf("[ERROR] Wrong hero spawn coordinates");
 }
