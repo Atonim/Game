@@ -9,7 +9,8 @@
 #include "../../Rules/WallsSpawn/WallsSpawnRule.h"
 class MediumLevel : public ILevelStrategy
 {
-	LevelGenerator<FieldSizeRule<15>, HeroSpawnRule<0, 0>, ShrineSpawnRule<9>, KeysSpawnRule<5>, TrapsSpawnRule<3>, WallsSpawnRule<78>> levelGenerator;
+	//в константном аргументе правил необходимо указать рамер поля, в аргументе расположения игрока - координаты 
+	LevelGenerator<FieldSizeRule<15>, HeroSpawnRule<0, 0>, ShrineSpawnRule<15>, KeysSpawnRule<15>, TrapsSpawnRule<15>, WallsSpawnRule<15>> levelGenerator;
 public:
 	Field* generateLevel() override;
 };

@@ -10,10 +10,8 @@
 #include "../../Rules/ShrineSpawn/ShrineSpawnEz.h"
 class EasyLevel : public ILevelStrategy
 {
-	LevelGenerator<ShrineSpawnEz<9>, HeroSpawnRule<0, 1>, FieldSizeRule<9>,  KeysSpawnEz<0>,   TrapsSpawnEz<9>, WallsSpawnEz<9>> levelGenerator;
+	//в константном аргументе правил необходимо указать рамер поля, в аргументе расположения игрока - координаты 
+	LevelGenerator<ShrineSpawnEz<9>, HeroSpawnRule<1, 7>, FieldSizeRule<9>,  KeysSpawnEz<9>,   TrapsSpawnEz<9>, WallsSpawnEz<9>> levelGenerator;
 public:
 	Field* generateLevel() override;
 };
-
-//проверка на недопустимые значения
-//порядок не важен
